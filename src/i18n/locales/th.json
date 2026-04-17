@@ -1,0 +1,43 @@
+{
+  "navbar": {
+    "home": "หน้าแรก",
+    "allProducts": "ผลิตภัณฑ์ทั้งหมด",
+    "cleaningAndGrooming": "กลุ่ม Cleaning & Grooming",
+    "bioShampoo": "ไบโอแชมพู",
+    "shampooOil": "แชมพูออยล์",
+    "dryFoamShampoo": "แชมพูโฟมอาบแห้ง",
+    "coatTreatment": "ทรีตเมนต์บำรุงขน",
+    "sprayAndCare": "กลุ่ม Spray & Care",
+    "coatBacteria": "สเปรย์บำรุงขน & กำจัดเชื้อแบคทีเรีย",
+    "deodorizer": "สเปรย์ดับกลิ่นสัตว์เลี้ยง",
+    "antiFungal": "สเปรย์ยับยั้งเชื้อราและยีสต์",
+    "eyeEarCleaner": "น้ำยาเช็ดคราบน้ำตาและใบหู",
+    "skinAndPowder": "กลุ่ม Skin & Powder",
+    "healingGel": "เจลฟื้นฟูสภาพผิว (เจลสมานแผล)",
+    "tearStainPowder": "แป้งกันคราบน้ำตา",
+    "bodyPowder": "แป้งทาตัวสัตว์เลี้ยง",
+    "rd": "รับวิจัยและพัฒนาสูตร",
+    "rdPetProducts": "รับวิจัยและพัฒนาสูตรผลิตภัณฑ์สัตว์เลี้ยง",
+    "branding": "การสร้างแบรนด์",
+    "brandingSteps": "ขั้นตอนการสร้างแบรนด์",
+    "innovation": "นวัตกรรมและสารสกัด",
+    "news": "ข่าวสาร/กิจกรรม",
+    "trendsActivities": "อัพเดทเทรนด์สินค้าสัตว์เลี้ยง / กิจกรรม",
+    "videos": "วิดีโอ: การสร้างแบรนด์ / การตลาด / สารสกัด",
+    "contactUs": "ติดต่อเรา",
+    "appointment": "ติดต่อนัดหมายสร้างแบรนด์",
+    "faq": "คำถามที่พบบ่อย"
+  },
+  "layout": {
+    "login": "เข้าสู่ระบบ",
+    "getStarted": "เริ่มต้นใช้งาน",
+    "contact": "ติดต่อเรา"
+  },
+  "hero": {
+    "badge": "เทคโนโลยีแห่งอนาคต",
+    "title1": "สร้างเว็บไซต์สุดล้ำด้วย",
+    "subtitle": "สัมผัสประสบการณ์ที่สมบูรณ์แบบระหว่าง Material Design และความยืดหยุ่นของ Tailwind CSS",
+    "btnStart": "เริ่มต้นตอนนี้เลย",
+    "btnView": "ดูคอมโพเนนต์"
+  }
+}

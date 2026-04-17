@@ -1,0 +1,43 @@
+{
+  "navbar": {
+    "home": "Home",
+    "allProducts": "All Products",
+    "cleaningAndGrooming": "Cleaning & Grooming",
+    "bioShampoo": "Bio Shampoo",
+    "shampooOil": "Shampoo Oil",
+    "dryFoamShampoo": "Dry Foam Shampoo",
+    "coatTreatment": "Coat Treatment",
+    "sprayAndCare": "Spray & Care",
+    "coatBacteria": "Coat Care & Anti-bacteria Spray",
+    "deodorizer": "Pet Deodorizer Spray",
+    "antiFungal": "Anti-fungal & Yeast Spray",
+    "eyeEarCleaner": "Tear Stain & Ear Cleaner",
+    "skinAndPowder": "Skin & Powder",
+    "healingGel": "Skin Healing Gel",
+    "tearStainPowder": "Tear Stain Powder",
+    "bodyPowder": "Pet Body Powder",
+    "rd": "Research & Development",
+    "rdPetProducts": "R&D for Pet Products",
+    "branding": "Branding",
+    "brandingSteps": "Brand Creation Steps",
+    "innovation": "Innovation & Extracts",
+    "news": "News / Activities",
+    "trendsActivities": "Pet Product Trends & Activities",
+    "videos": "Videos: Branding / Marketing / Extracts",
+    "contactUs": "Contact Us",
+    "appointment": "Schedule Branding Consultation",
+    "faq": "Frequently Asked Questions"
+  },
+  "layout": {
+    "login": "Log In",
+    "getStarted": "Get Started",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "badge": "Welcome to the Future of UI",
+    "title1": "Build stunning websites with",
+    "subtitle": "Experience the perfect blend of Material Design components and Tailwind's flexible utility classes.",
+    "btnStart": "Start Building Now",
+    "btnView": "View Components"
+  }
+}
