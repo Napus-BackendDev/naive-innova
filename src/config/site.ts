@@ -1,16 +1,16 @@
 export const siteConfig = {
-  name: "NexusUI",
-  description: "A premium React app built with Material UI and Tailwind CSS.",
-  url: "http://localhost:5173",
+  name: "NAIVE INNOVA",
+  description: "Deep-Tech Pet Care Platform - Professional OEM/ODM Pet Products Manufacturing.",
+  url: "https://naiveinnova.com",
   links: {
-    github: "https://github.com/nexusui",
-    twitter: "https://twitter.com/nexusui",
-    linkedin: "https://linkedin.com/company/nexusui",
+    facebook: "https://facebook.com/naiveinnova",
+    line: "https://line.me/R/ti/p/@naiveinnova",
+    youtube: "https://youtube.com/@naiveinnova",
   },
   navLinks: [
     { label: 'Home', path: '/' },
     { label: 'About', path: '/about' },
-    { label: 'Pricing', path: '/pricing' }
+    { label: 'Products', path: '/all-products' }
   ]
 };
 

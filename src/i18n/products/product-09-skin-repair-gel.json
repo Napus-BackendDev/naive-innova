@@ -1,0 +1,106 @@
+{
+  "id": "skin-repair-gel",
+  "num": "09",
+  "image": "product-09-skin-repair-gel.jpg",
+  "category": "Skin & Powder",
+  "categoryTh": "ดูแลผิวและแป้ง",
+  "categoryColor": "pink",
+  "name": "เจลฟื้นฟูสภาพผิว",
+  "nameEn": "Skin Repair Gel (Petlary)",
+  "tagline": "เจลสมานแผล ฟื้นฟูผิวหนังอย่างอ่อนโยน ปลอดภัยทุกการดูแล",
+  "pitch": "ดูแลผิวเฉพาะจุด ช่วยฟื้นฟูบาดแผลเล็กน้อย แผลถลอก รอยขีดข่วน ผิวแตก ระคายเคือง ด้วยเนื้อเจลใส ซึมง่าย ไม่เหนียว",
+  "price": "225",
+  "unit": "บาท / กก. (ต้นทุน)",
+  "moq": "500 ชิ้น",
+  "leadTime": "15-20 วัน",
+  "volume": "20 / 50 / 100 ml.",
+  "pricingMode": "A",
+  "starterBudget": "เริ่ม 6,500 บาท (20g. × 500 ชิ้น)",
+  "claims": [
+    "ไม่มี SLS / SLES",
+    "ไม่มีซิลิโคน",
+    "ไม่มีพาราเบน",
+    "ปลอดแอลกอฮอล์"
+  ],
+  "pricing": [
+    {
+      "size": "20 ml.",
+      "q100": "13 (6,500)",
+      "q500": "12 (12,000)",
+      "q1000": "11 (22,000)",
+      "q2000": "10 (40,000)"
+    },
+    {
+      "size": "50 ml.",
+      "q100": "20 (10,000)",
+      "q500": "19 (19,000)",
+      "q1000": "18 (36,000)",
+      "q2000": "16 (64,000)"
+    },
+    {
+      "size": "100 ml.",
+      "q100": "32 (16,000)",
+      "q500": "31 (31,000)",
+      "q1000": "29 (58,000)",
+      "q2000": "26 (104,000)"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "เร่งการสมานแผลเร็วขึ้น",
+      "desc": "นาโนใบบัวบก-มังคุด สร้างเนื้อเยื่อใหม่"
+    },
+    {
+      "title": "ป้องกันการติดเชื้อ",
+      "desc": "EcoGuard Nano-Bioadhesive ยับยั้งแบคทีเรีย เชื้อรา"
+    },
+    {
+      "title": "ลดอักเสบ ลดบวม ลดเจ็บ",
+      "desc": "คงความชุ่มชื้นให้แผลหายไว"
+    },
+    {
+      "title": "ลดรอยแผลเป็น",
+      "desc": "Moist-Healing และสารฟื้นฟูผิว"
+    }
+  ],
+  "ingredients": [
+    {
+      "name": "Centella Asiatica (ECa233)",
+      "desc": "กระตุ้นคอลลาเจน ซ่อมแซมผิว"
+    },
+    {
+      "name": "Garcinia Mangostana (Xanthones)",
+      "desc": "ลดบวม แดง เจ็บ กระตุ้นซ่อมแซมเนื้อเยื่อ"
+    },
+    {
+      "name": "EcoGuard Plus (Nano Bio-adhesive)",
+      "desc": "ต้านเชื้อจุลชีพ เป็นกาวชีวภาพ"
+    },
+    {
+      "name": "Hyaluronic Acid Nano",
+      "desc": "Moist-Healing 72 ชม."
+    }
+  ],
+  "testResults": [
+    {
+      "lab": "ศูนย์วิจัยสัตวแพทย์พาร์ทเนอร์",
+      "test": "Clinical Case Study (6 เคส)",
+      "result": "แผล 4-6 ซม. หายสนิท 80%+ ใน 21 วัน"
+    },
+    {
+      "lab": "ศูนย์วิจัยสัตวแพทย์พาร์ทเนอร์",
+      "test": "Granulation Tissue Formation",
+      "result": "เห็นเนื้อเยื่อใหม่ภายใน 7 วัน"
+    },
+    {
+      "lab": "ม.เกษตรศาสตร์",
+      "test": "Anti-infection",
+      "result": "EcoGuard Plus ยับยั้ง MRSP ≤0.0977%"
+    }
+  ],
+  "related": [
+    "tear-stain-powder",
+    "body-powder",
+    "custom-formula"
+  ]
+}

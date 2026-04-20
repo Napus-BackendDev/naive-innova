@@ -189,12 +189,12 @@ export default function TheHeader() {
       className="bg-white/80 backdrop-blur-lg border-b border-slate-200/50"
     >
       <Container maxWidth="xl">
-        <Toolbar className="flex justify-between items-center px-0 min-h-[80px]">
+        <Toolbar className="flex justify-between items-center px-0 min-h-[100px]">
           {/* 1. Mobile Hamburger Icon (Left on mobile, hidden on lg+) */}
           <IconButton
             onClick={handleDrawerToggle}
             color="inherit"
-            sx={{ display: { xs: 'flex', lg: 'none' } }}
+            sx={{ display: { xs: 'flex', lg: 'none' }, '@media (min-width: 1024px)': { display: 'none' } }}
             className="p-2 rounded-xl bg-slate-50 border border-slate-100 shadow-sm"
           >
             <Menu size={24} className="text-slate-700" />
@@ -225,10 +225,10 @@ export default function TheHeader() {
                     </Button>
 
                     <div className="absolute top-full left-1/2 -translate-x-1/2 hidden group-hover:block pt-4 z-50">
-                      <div className="bg-white rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 p-8 w-[800px] max-w-[90vw] relative">
+                      <div className="bg-white rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 p-8 w-[1100px] max-w-[90vw] relative">
                         <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-t border-l border-slate-100 transform rotate-45"></div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                           {item.children.map((col, colIdx) => (
                             <div key={colIdx} className="flex flex-col">
                               <Typography variant="subtitle2" className="text-cyan-600 font-bold mb-4 tracking-tight border-b border-slate-100 pb-2">

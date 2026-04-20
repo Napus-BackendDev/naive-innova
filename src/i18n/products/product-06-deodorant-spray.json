@@ -1,0 +1,105 @@
+{
+  "id": "deodorant-spray",
+  "num": "06",
+  "image": "product-06-deodorant-spray.jpg",
+  "category": "Spray & Care",
+  "categoryTh": "สเปรย์ดูแล",
+  "categoryColor": "blue",
+  "name": "สเปรย์ดับกลิ่น",
+  "nameEn": "Deodorant Spray",
+  "tagline": "จับและสลายกลิ่นที่ต้นเหตุ ไม่ใช่แค่กลบ",
+  "pitch": "สเปรย์ขจัดกลิ่นไม่พึงประสงค์จากตัวสัตว์เลี้ยง พร้อมกลิ่นหอมอ่อน ปลอดภัย ไม่ระคายเคืองผิวหรือระบบทางเดินหายใจ",
+  "price": "725",
+  "unit": "บาท / ลิตร (ต้นทุน)",
+  "moq": "100 ชิ้น",
+  "leadTime": "15-20 วัน",
+  "volume": "30 / 50 / 100 ml.",
+  "pricingMode": "A",
+  "starterBudget": "เริ่ม 3,100 บาท (30ml. × 100 ชิ้น)",
+  "claims": [
+    "Alcohol-Free",
+    "No Paraben",
+    "Triclosan-Free"
+  ],
+  "pricing": [
+    {
+      "size": "30 ml.",
+      "q100": "31 (3,100)",
+      "q500": "30 (15,000)",
+      "q1000": "28 (28,000)",
+      "q2000": "26 (52,000)"
+    },
+    {
+      "size": "50 ml.",
+      "q100": "48 (4,800)",
+      "q500": "46 (23,000)",
+      "q1000": "43 (43,000)",
+      "q2000": "40 (80,000)"
+    },
+    {
+      "size": "100 ml.",
+      "q100": "87 (8,700)",
+      "q500": "83 (41,500)",
+      "q1000": "79 (79,000)",
+      "q2000": "74 (148,000)"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "กำจัดกลิ่นปัสสาวะ กลิ่นสัตว์เลี้ยง",
+      "desc": "ได้จริงจากต้นเหตุ"
+    },
+    {
+      "title": "ดักจับและสลายโมเลกุลกลิ่น",
+      "desc": "กลิ่นอับ ความเหม็นจากแบคทีเรีย รา"
+    },
+    {
+      "title": "ป้องกันกลิ่นกลับมาใหม่",
+      "desc": "EcoGuard Plus ยับยั้งแบคทีเรียและยีสต์"
+    },
+    {
+      "title": "ปลอดภัย ใช้ได้ทุกพื้นผิว",
+      "desc": "ไม่กัดพื้น ไม่ทิ้งคราบ สูตรใส ไม่เหนียว"
+    }
+  ],
+  "ingredients": [
+    {
+      "name": "EcoGuard Plus",
+      "desc": "ทำลายเชื้อที่เป็นสาเหตุของกลิ่น"
+    },
+    {
+      "name": "Disodium EDTA",
+      "desc": "ลดปัจจัยที่ทำให้เกิดกลิ่น"
+    },
+    {
+      "name": "Allantoin",
+      "desc": "ให้ผิวรู้สึกสบาย ไม่แห้งตึง"
+    },
+    {
+      "name": "Natural Fragrance",
+      "desc": "น้ำมันหอมระเหยเกรดอาหาร ปลอดภัย"
+    }
+  ],
+  "testResults": [
+    {
+      "lab": "ม.เกษตรศาสตร์",
+      "test": "Antibacterial (EcoGuard Plus)",
+      "result": "ฆ่าเชื้อ S. pseudintermedius, P. aeruginosa ≤0.0977%"
+    },
+    {
+      "lab": "In-house",
+      "test": "Odor Panel Test",
+      "result": "ลดกลิ่นได้ 96% ใน 10 นาที"
+    },
+    {
+      "lab": "Clinical",
+      "test": "Safety",
+      "result": "ไม่ระคายเคืองในการใช้ 30 วัน"
+    }
+  ],
+  "related": [
+    "coat-antibac-spray",
+    "antifungal-spray",
+    "eye-ear-cleaner"
+  ]
+}

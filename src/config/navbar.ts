@@ -22,23 +22,23 @@ export const navbarConfig: NavItem[] = [
         children: [
           { label: 'navbar.bioShampoo', path: '/cleaning/bio-shampoo' },
           { label: 'navbar.shampooOil', path: '/cleaning/shampoo-oil' },
-          { label: 'navbar.dryFoamShampoo', path: '/cleaning/dry-foam-shampoo' },
+          { label: 'navbar.dryFoamShampoo', path: '/cleaning/dry-foam' },
           { label: 'navbar.coatTreatment', path: '/cleaning/coat-treatment' },
         ]
       },
       {
         label: 'navbar.sprayAndCare',
         children: [
-          { label: 'navbar.coatBacteria', path: '/spray/coat-bacteria' },
-          { label: 'navbar.deodorizer', path: '/spray/deodorizer' },
-          { label: 'navbar.antiFungal', path: '/spray/anti-fungal' },
+          { label: 'navbar.coatBacteria', path: '/spray/coat-antibac-spray' },
+          { label: 'navbar.deodorizer', path: '/spray/deodorant-spray' },
+          { label: 'navbar.antiFungal', path: '/spray/antifungal-spray' },
           { label: 'navbar.eyeEarCleaner', path: '/spray/eye-ear-cleaner' },
         ]
       },
       {
         label: 'navbar.skinAndPowder',
         children: [
-          { label: 'navbar.healingGel', path: '/skin/healing-gel' },
+          { label: 'navbar.healingGel', path: '/skin/skin-repair-gel' },
           { label: 'navbar.tearStainPowder', path: '/skin/tear-stain-powder' },
           { label: 'navbar.bodyPowder', path: '/skin/body-powder' },
         ]
@@ -46,7 +46,7 @@ export const navbarConfig: NavItem[] = [
       {
         label: 'navbar.rd',
         children: [
-          { label: 'navbar.rdPetProducts', path: '/rd/pet-products' },
+          { label: 'navbar.rdPetProducts', path: '/rd/custom-formula' },
         ]
       }
     ]
@@ -63,7 +63,7 @@ export const navbarConfig: NavItem[] = [
     label: 'navbar.news',
     type: 'default',
     children: [
-      { label: 'navbar.trendsActivities', path: '/news/trends-activities' },
+      { label: 'navbar.trendsActivities', path: '/news/activities-new' },
       { label: 'navbar.videos', path: '/news/videos' },
     ]
   },
@@ -71,7 +71,7 @@ export const navbarConfig: NavItem[] = [
     label: 'navbar.contactUs',
     type: 'default',
     children: [
-      { label: 'navbar.appointment', path: '/contact/appointment' },
+      { label: 'navbar.appointment', path: '/content' },
       { label: 'navbar.faq', path: '/contact/faq' },
     ]
   },

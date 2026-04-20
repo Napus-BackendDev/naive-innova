@@ -10,9 +10,9 @@ export default function MainLayout({ children }: MainLayoutProps) {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 overflow-hidden font-sans">
       <TheHeader />
-      
+
       {/* Main Content Area */}
-      <main className="flex-grow pt-20">
+      <main className="flex-grow pt-16">
         {children}
       </main>
 

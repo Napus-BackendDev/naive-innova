@@ -1,0 +1,98 @@
+{
+  "id": "custom-formula",
+  "num": "12",
+  "image": "product-12-custom-formula.jpeg",
+  "category": "Custom Formula",
+  "categoryTh": "สูตรเฉพาะของคุณ",
+  "categoryColor": "purple",
+  "name": "Custom Formula",
+  "nameEn": "Custom Formulation Service",
+  "tagline": "สร้างสูตรเฉพาะแบรนด์ของคุณจากศูนย์",
+  "pitch": "สำหรับแบรนด์ที่ต้องการจุดขายเฉพาะที่คู่แข่งเลียนแบบไม่ได้ ทีม R&D จะพัฒนาสูตรใหม่ร่วมกับคุณ ตั้งแต่โจทย์จริง สู่สูตรที่ validate ในห้องแล็บมาตรฐานและคลินิกสัตวแพทย์พาร์ทเนอร์",
+  "price": "Quote-based",
+  "unit": "ประเมินราคาตามสเปค",
+  "moq": "ขั้นต่ำ 300 ชิ้น",
+  "leadTime": "45-60 วัน",
+  "volume": "ออกแบบร่วมกัน",
+  "pricingMode": "A",
+  "starterBudget": "เริ่มต้นพัฒนาสูตร 30,000 บาท (รวม Prototype & Sample)",
+  "claims": [
+    "Exclusive Formula",
+    "Clinical-Tested",
+    "University-Validated"
+  ],
+  "pricing": [
+    {
+      "size": "R&D Fee",
+      "q100": "30,000+",
+      "q500": "Included in MOQ",
+      "q1000": "Included in MOQ",
+      "q2000": "Included in MOQ"
+    },
+    {
+      "size": "Production",
+      "q100": "Quote",
+      "q500": "Quote",
+      "q1000": "Quote",
+      "q2000": "Quote"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "เป็นเจ้าของสูตรเต็มตัว",
+      "desc": "Exclusive Formula Agreement — สูตรของคุณเท่านั้น"
+    },
+    {
+      "title": "Nano Library 50+ สูตรพื้นฐาน",
+      "desc": "เริ่มจากสูตรที่ validated แล้ว ปรับแต่งเพื่อแบรนด์คุณ"
+    },
+    {
+      "title": "ทีม R&D ระดับนักวิจัย",
+      "desc": "ทีม R&D และ NANOTEC ทำงานตรงกับคุณ"
+    },
+    {
+      "title": "ผ่าน Clinical Test ทุกสูตร",
+      "desc": "ทดสอบกับสัตว์จริงก่อนผลิต"
+    }
+  ],
+  "ingredients": [
+    {
+      "name": "เลือกจาก Nano Library",
+      "desc": "สมุนไพร น้ำมันหอม Active ingredients 100+ ชนิด"
+    },
+    {
+      "name": "EcoGuard Plus",
+      "desc": "ใช้ในทุกสูตรเพื่อความปลอดภัย"
+    },
+    {
+      "name": "วัตถุดิบเกรดพรีเมียม",
+      "desc": "จากแหล่งในไทยและนำเข้าที่ validated"
+    },
+    {
+      "name": "เลือก pH, กลิ่น, สี ได้",
+      "desc": "ออกแบบร่วมกันทุกรายละเอียด"
+    }
+  ],
+  "testResults": [
+    {
+      "lab": "R&D Consultation",
+      "test": "Brief Session",
+      "result": "1-2 ครั้ง เข้าใจ Vision + Target user"
+    },
+    {
+      "lab": "ศูนย์วิจัยสัตวแพทย์พาร์ทเนอร์",
+      "test": "Efficacy & Safety",
+      "result": "ตามโจทย์ที่ตั้งร่วมกัน"
+    },
+    {
+      "lab": "ม.เกษตรศาสตร์",
+      "test": "Challenge Test",
+      "result": "Validate ก่อน mass production"
+    }
+  ],
+  "related": [
+    "bio-shampoo",
+    "coat-antibac-spray",
+    "skin-repair-gel"
+  ]
+}
