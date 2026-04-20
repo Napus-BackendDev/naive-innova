@@ -38,7 +38,7 @@ export default function ContactSection() {
 
           <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-4 lg:gap-6">
             <motion.a
-              href="https://line.me"
+              href="https://lin.ee/tao11ce"
               target="_blank"
               whileHover={{ scale: 1.02, y: -2 }}
               whileTap={{ scale: 0.98 }}

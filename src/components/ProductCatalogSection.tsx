@@ -148,6 +148,8 @@ export default function ProductCatalogSection() {
               <motion.a
                 key={btn.id}
                 href={btn.href}
+                target={btn.target}
+                rel={btn.target === '_blank' ? 'noopener noreferrer' : undefined}
                 whileHover={{ y: -5 }}
                 className={`group relative rounded-2xl md:rounded-[24px] overflow-hidden cursor-pointer transition-all duration-300 ${btn.gridClass}`}
               >

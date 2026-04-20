@@ -7,24 +7,24 @@ export default function TheFooter() {
   const { t } = useTranslation();
 
   const serviceLinks = [
-    { label: t('footer.serv1'), href: '#' },
-    { label: t('footer.serv2'), href: '#' },
-    { label: t('footer.serv3'), href: '#' },
-    { label: t('footer.serv4'), href: '#' },
+    { label: t('footer.serv1'), href: '/branding/steps' },
+    { label: t('footer.serv2'), href: '/branding/innovation' },
+    { label: t('footer.serv3'), href: '/branding/steps' },
+    { label: t('footer.serv4'), href: '/contact/faq' },
   ];
 
   const infoLinks = [
-    { label: t('footer.info1'), href: '#' },
-    { label: t('footer.info2'), href: '#' },
-    { label: t('footer.info3'), href: '#' },
-    { label: t('footer.info4'), href: '#' },
+    { label: t('footer.info1'), href: '/branding/innovation' },
+    { label: t('footer.info2'), href: '/branding/innovation' },
+    { label: t('footer.info3'), href: '/news/activities-new' },
+    { label: t('footer.info4'), href: '/news/videos' },
   ];
 
   const helpLinks = [
-    { label: t('footer.help1'), href: '#' },
-    { label: t('footer.help2'), href: '#' },
-    { label: t('footer.help3'), href: '#' },
-    { label: t('footer.help4'), href: '#' },
+    { label: t('footer.help1'), href: '/content' },
+    { label: t('footer.help2'), href: '/contact/faq' },
+    { label: t('footer.help3'), href: '/content' },
+    { label: t('footer.help4'), href: '/news/videos' },
   ];
 
   return (
@@ -36,7 +36,7 @@ export default function TheFooter() {
             <div className="mb-8">
               <img src={logo} alt="Naive Innova" className="h-10 w-auto" />
             </div>
-            
+
             <div className="space-y-1 mb-8">
               <Typography variant="body2" className="text-gray-800 leading-relaxed font-semibold">
                 {t('footer.desc1')}
@@ -93,9 +93,9 @@ export default function TheFooter() {
               </Typography>
               <Stack spacing={2.5}>
                 {serviceLinks.map((link) => (
-                  <Typography 
+                  <Typography
                     key={link.label}
-                    variant="body2" 
+                    variant="body2"
                     component="a"
                     href={link.href}
                     className="text-gray-600 hover:text-cyan-600 transition-colors no-underline font-medium"
@@ -112,9 +112,9 @@ export default function TheFooter() {
               </Typography>
               <Stack spacing={2.5}>
                 {infoLinks.map((link) => (
-                  <Typography 
+                  <Typography
                     key={link.label}
-                    variant="body2" 
+                    variant="body2"
                     component="a"
                     href={link.href}
                     className="text-gray-600 hover:text-cyan-600 transition-colors no-underline font-medium"
@@ -131,9 +131,9 @@ export default function TheFooter() {
               </Typography>
               <Stack spacing={2.5}>
                 {helpLinks.map((link) => (
-                  <Typography 
+                  <Typography
                     key={link.label}
-                    variant="body2" 
+                    variant="body2"
                     component="a"
                     href={link.href}
                     className="text-gray-600 hover:text-cyan-600 transition-colors no-underline font-medium"
