@@ -1,6 +1,6 @@
 import { Container, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
-import { ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 import ecoguardNano from '../../assets/innovation/ecoguard-nano.png';
 
 const specs = [

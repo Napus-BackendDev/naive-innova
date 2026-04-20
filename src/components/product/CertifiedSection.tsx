@@ -1,6 +1,6 @@
 import { Typography, Container } from '@mui/material';
 import { motion } from 'framer-motion';
-import { ShieldCheck, ChevronLeft, ChevronRight, Check, FileText, Download, ExternalLink } from 'lucide-react';
+import { ShieldCheck, ChevronLeft, ChevronRight, Download, ExternalLink } from 'lucide-react';
 import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 

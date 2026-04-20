@@ -1,6 +1,6 @@
 import { Container, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
-import { Layers } from 'lucide-react';
+import {  } from 'lucide-react';
 import nanotechEncap from '../../assets/innovation/nanotech-encap.png';
 
 const specs = [

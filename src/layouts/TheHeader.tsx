@@ -120,8 +120,10 @@ export default function TheHeader() {
                       >
                         <ListItemText
                           primary={t(item.label)}
-                          primaryTypographyProps={{
-                            className: `font-bold ${hasChildren ? "text-slate-800" : "text-slate-600"}`
+                          slotProps={{
+                            primary: {
+                              className: `font-bold ${hasChildren ? "text-slate-800" : "text-slate-600"}`
+                            }
                           }}
                         />
                         {hasChildren && (
@@ -148,7 +150,9 @@ export default function TheHeader() {
                               >
                                 <ListItemText
                                   primary={t(child.label)}
-                                  primaryTypographyProps={{ className: "text-slate-600 text-sm font-medium" }}
+                                  slotProps={{
+                                    primary: { className: "text-slate-600 text-sm font-medium" }
+                                  }}
                                 />
                               </ListItemButton>
                             ))}
@@ -320,8 +324,10 @@ export default function TheHeader() {
         ModalProps={{
           keepMounted: true,
         }}
-        PaperProps={{
-          className: "w-[50vw] shadow-2xl"
+        slotProps={{
+          paper: {
+            className: "w-[50vw] shadow-2xl"
+          }
         }}
         className="lg:hidden"
       >

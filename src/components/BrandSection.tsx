@@ -2,23 +2,14 @@ import { useState, useEffect, useRef } from 'react';
 import { Typography, Container } from '@mui/material';
 import { motion, useInView, animate } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { School, FlaskConical, Microscope, Factory, Heart, Users, ChevronLeft, ChevronRight } from 'lucide-react';
-import { brands, instPartners, stats } from '../config/brand';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { stats } from '../config/brand';
 import logoData from '../assets/partner/logo-section.json';
 
 const partnerLogoModules = import.meta.glob('../assets/partner/*.{png,jpg,jpeg,svg}', { eager: true });
 
 const imageModules = import.meta.glob('../assets/brand/*.png', { eager: true });
 const brandImages = Object.values(imageModules).map((mod: any) => mod.default);
-
-const IconMap = {
-  School,
-  FlaskConical,
-  Microscope,
-  Factory,
-  Heart,
-  Users
-} as const;
 
 // Helper to get partner logo URL from filename in JSON
 const getPartnerLogoUrl = (filename: string) => {

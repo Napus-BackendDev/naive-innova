@@ -46,7 +46,7 @@ export default function TheFooter() {
               </Typography>
             </div>
 
-            <Stack gap={2.5}>
+            <Stack spacing={2.5}>
               <div className="flex items-center gap-3 group cursor-pointer">
                 <div className="w-9 h-9 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-600 transition-all group-hover:scale-110 group-hover:bg-cyan-200">
                   <Phone size={18} />
@@ -91,7 +91,7 @@ export default function TheFooter() {
               <Typography variant="subtitle1" className="text-gray-900 font-bold mb-6">
                 {t('footer.servicesTitle')}
               </Typography>
-              <Stack gap={2.5}>
+              <Stack spacing={2.5}>
                 {serviceLinks.map((link) => (
                   <Typography 
                     key={link.label}
@@ -110,7 +110,7 @@ export default function TheFooter() {
               <Typography variant="subtitle1" className="text-gray-900 font-bold mb-6">
                 {t('footer.infoTitle')}
               </Typography>
-              <Stack gap={2.5}>
+              <Stack spacing={2.5}>
                 {infoLinks.map((link) => (
                   <Typography 
                     key={link.label}
@@ -129,7 +129,7 @@ export default function TheFooter() {
               <Typography variant="subtitle1" className="text-gray-900 font-bold mb-6">
                 {t('footer.helpTitle')}
               </Typography>
-              <Stack gap={2.5}>
+              <Stack spacing={2.5}>
                 {helpLinks.map((link) => (
                   <Typography 
                     key={link.label}

@@ -1,20 +1,11 @@
 import { Container, Typography, Button } from '@mui/material';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { Play, PlayCircle, ArrowRight, Youtube, Smartphone } from 'lucide-react';
+import { Play, ArrowRight, Youtube, Smartphone } from 'lucide-react';
 import { youtubeShorts } from '../../config/videos';
 
 // ── YouTube Videos ──
-const youtubeVideos = [
-  { id: 'yt1', title: 'Nano Lab Tour เชียงราย — เบื้องหลังก่อนสินค้าออกจากโรงงาน', duration: '12:34', views: '4.2K', date: 'Mar 2026', tag: 'Factory Tour' },
-  { id: 'yt2', title: 'EcoGuard Plus™ คืออะไร? วิทยาศาสตร์เบื้องหลังสารต้านจุลชีพ', duration: '8:17', views: '6.8K', date: 'Mar 2026', tag: 'นวัตกรรม' },
-  { id: 'yt3', title: 'ขั้นตอนการสร้างแบรนด์ Pet Care จากศูนย์ ด้วยงบไม่เกิน 50,000', duration: '15:02', views: '12.1K', date: 'Feb 2026', tag: 'แบรนด์' },
-  { id: 'yt4', title: 'Nano Encapsulation ทำงานอย่างไร? อธิบาย 84 นาโนเมตรให้เข้าใจ', duration: '10:45', views: '3.9K', date: 'Feb 2026', tag: 'วิทยาศาสตร์' },
-  { id: 'yt5', title: 'สมุนไพรไทย 8 ชนิดที่เราใช้ในสูตร — คัดสรรแบบไหน?', duration: '9:28', views: '5.5K', date: 'Jan 2026', tag: 'สมุนไพร' },
-  { id: 'yt6', title: 'MOQ 100 ชิ้น คุ้มไหม? วิเคราะห์ต้นทุน OEM สัตว์เลี้ยง', duration: '11:03', views: '7.3K', date: 'Jan 2026', tag: 'ธุรกิจ' },
-  { id: 'yt7', title: 'FDA กับ EFSA ต่างกันอย่างไร? และทำไมต้องมีทั้งคู่', duration: '7:55', views: '2.8K', date: 'Dec 2025', tag: 'มาตรฐาน' },
-  { id: 'yt8', title: 'ทดสอบสูตรจริงใน Lab ม.เกษตรศาสตร์ — กระบวนการเต็มๆ', duration: '18:22', views: '9.1K', date: 'Dec 2025', tag: 'วิจัย' },
-];
+
 
 // ── Shorts ──
 const shorts = youtubeShorts.map(s => ({
@@ -25,51 +16,7 @@ const shorts = youtubeShorts.map(s => ({
 
 const VISIBLE_DEFAULT = 4;
 
-function YouTubeCard({ video, idx }: { video: typeof youtubeVideos[0]; idx: number }) {
-  return (
-    <motion.a
-      href="#"
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: idx * 0.1 }}
-      className="group relative aspect-video rounded-[28px] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-700 bg-slate-900 block"
-    >
-      {/* Thumbnail placeholder */}
-      <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_12px,rgba(255,255,255,0.025)_12px,rgba(255,255,255,0.025)_24px)] opacity-80 transition-all duration-1000 group-hover:scale-110 group-hover:opacity-0" />
 
-      {/* Play Overlay */}
-      <div className="absolute inset-0 bg-slate-900/30 group-hover:bg-slate-900/50 transition-colors duration-500 flex items-center justify-center">
-        <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center group-hover:bg-white group-hover:text-red-500 transition-all duration-500 scale-90 group-hover:scale-100">
-          <Play size={24} fill="currentColor" className="ml-1" />
-        </div>
-      </div>
-
-      {/* Duration badge */}
-      <div className="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-black/70 text-white text-[11px] font-bold">
-        {video.duration}
-      </div>
-
-      {/* Category tag */}
-      <div className="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-cyan-500/90 backdrop-blur-sm text-white text-[10px] font-black uppercase tracking-wider">
-        {video.tag}
-      </div>
-
-      {/* Hover label */}
-      <div className="absolute bottom-3 left-4">
-        <p className="text-white/0 group-hover:text-white/80 font-black uppercase tracking-[0.25em] text-[9px] transition-all duration-500">
-          WATCH ON YOUTUBE
-        </p>
-      </div>
-
-      {/* Title on hover */}
-      <div className="absolute inset-x-0 bottom-0 p-4 pt-10 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-        <p className="text-white text-xs font-bold leading-snug line-clamp-2">{video.title}</p>
-        <p className="text-white/50 text-[10px] mt-1">{video.views} views · {video.date}</p>
-      </div>
-    </motion.a>
-  );
-}
 
 function ShortCard({ short, idx }: { short: typeof shorts[0]; idx: number }) {
   return (
@@ -122,10 +69,8 @@ function ShortCard({ short, idx }: { short: typeof shorts[0]; idx: number }) {
 }
 
 export default function VideoArticlesSection() {
-  const [showAllYT, setShowAllYT] = useState(false);
   const [showAllShorts, setShowAllShorts] = useState(false);
 
-  const visibleYT = showAllYT ? youtubeVideos : youtubeVideos.slice(0, VISIBLE_DEFAULT);
   const visibleShorts = showAllShorts ? shorts : shorts.slice(0, VISIBLE_DEFAULT);
 
   return (

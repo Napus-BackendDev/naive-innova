@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 const productImages = import.meta.glob('../../assets/eachproduct/*.{jpeg,jpg,png,svg}', { eager: true });
 
 export default function HeroSection({ product }: { product: any }) {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const currentLang = i18n.language;
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
 
