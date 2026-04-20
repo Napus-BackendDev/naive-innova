@@ -36,7 +36,7 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Noto Sans Thai', 'Inter', 'system-ui', 'sans-serif'],
       }
     },
   },

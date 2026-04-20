@@ -7,7 +7,7 @@ import { ThemeProvider, createTheme, StyledEngineProvider, CssBaseline } from '@
 
 const theme = createTheme({
   typography: {
-    fontFamily: '"Inter", "system-ui", sans-serif',
+    fontFamily: '"Noto Sans Thai", "Inter", "system-ui", sans-serif',
   },
   palette: {
     primary: {

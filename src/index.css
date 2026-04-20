@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
 @import "tailwindcss";
+
 
 @theme {
   --color-primary-50: #ecfeff;
@@ -25,7 +27,7 @@
   --color-secondary-900: #701a75;
   --color-secondary-950: #4a044e;
 
-  --font-sans: "Inter", "system-ui", "sans-serif";
+  --font-sans: "Noto Sans Thai", "Inter", "system-ui", "sans-serif";
 }
 
 @layer base {
