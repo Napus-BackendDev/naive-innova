@@ -5,6 +5,7 @@ import Product from './pages/Product';
 import Brand from './pages/Brand';
 import Innovation from './pages/Innovation';
 import New from './pages/New';
+import NewDetail from './pages/NewDetail';
 import Video from './pages/Video';
 import QA from './pages/QA';
 import ContentPage from './pages/Content';
@@ -24,6 +25,7 @@ function App() {
           <Route path="/branding/steps" element={<Brand />} />
           <Route path="/branding/innovation" element={<Innovation />} />
           <Route path="/news/activities-new" element={<New />} />
+          <Route path="/news/activities-new/:articleId" element={<NewDetail />} />
           <Route path="/news/videos" element={<Video />} />
           <Route path="/contact/faq" element={<QA />} />
           <Route path="/content" element={<ContentPage />} />

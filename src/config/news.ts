@@ -1,7 +1,7 @@
-import news1 from '../assets/behind-1.png'; 
-import news2 from '../assets/behind-2.png'; 
-import news3 from '../assets/behind-3.png'; 
-import news4 from '../assets/behind-4.png'; 
+import news1 from '../assets/behind-1.png';
+import news2 from '../assets/behind-2.png';
+import news3 from '../assets/behind-3.png';
+import news4 from '../assets/behind-4.png';
 
 export const innovationVideos = [
   {
