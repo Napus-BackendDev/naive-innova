@@ -15,6 +15,7 @@ export interface NewsArticle {
   categoryColor: string;
   date: string;
   readingTime: number;
+  wordCount: number;
   tags: string[];
   lead: string;
   body: ContentBlock[];
@@ -87,21 +88,26 @@ function toSlug(title: string, date: string): string {
 }
 
 // ── Map JSON → NewsArticle[] ─────────────────────────────
-export const newsArticles: NewsArticle[] = rawData.map((item, idx) => ({
-  id: idx + 1,
-  slug: toSlug(item.title ?? '', item.date ?? ''),
-  title: item.title ?? '',
-  subtitle: item.subtitle ?? '',
-  category: item.category ?? 'Brand Tips',
-  categoryColor: categoryColorMap[item.category ?? ''] ?? 'text-slate-600 bg-slate-50 border-slate-100',
-  date: item.date ?? '',
-  readingTime: parseReadingTime(item.content ?? []),
-  tags: item.tags ?? [],
-  lead: item.excerpt ?? '',
-  body: parseContent(item.content ?? []),
-  images: item.date ? getImages(item.date) : [],
-  sourceUrl: item.source_url ?? '',
-}));
+export const newsArticles: NewsArticle[] = rawData.map((item, idx) => {
+  const body = parseContent(item.content ?? []);
+  const wordCount = body.reduce((sum, block) => sum + block.text.split(/\s+/).filter(Boolean).length, 0);
+  return {
+    id: idx + 1,
+    slug: toSlug(item.title ?? '', item.date ?? ''),
+    title: item.title ?? '',
+    subtitle: item.subtitle ?? '',
+    category: item.category ?? 'Brand Tips',
+    categoryColor: categoryColorMap[item.category ?? ''] ?? 'text-slate-600 bg-slate-50 border-slate-100',
+    date: item.date ?? '',
+    readingTime: parseReadingTime(item.content ?? []),
+    wordCount,
+    tags: item.tags ?? [],
+    lead: item.excerpt ?? '',
+    body,
+    images: item.date ? getImages(item.date) : [],
+    sourceUrl: item.source_url ?? '',
+  };
+});
 
 
 // ── Helpers ──────────────────────────────────────────────
