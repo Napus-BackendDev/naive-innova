@@ -21,6 +21,7 @@ export interface NewsArticle {
   body: ContentBlock[];
   images: string[];
   sourceUrl: string;
+  keyTakeaways?: string[];
 }
 
 // ── Image loader (via import.meta.glob) ──────────────────
@@ -106,6 +107,9 @@ export const newsArticles: NewsArticle[] = rawData.map((item, idx) => {
     body,
     images: item.date ? getImages(item.date) : [],
     sourceUrl: item.source_url ?? '',
+    keyTakeaways: (item as any).key_takeaway
+      ? (Array.isArray((item as any).key_takeaway) ? (item as any).key_takeaway : [(item as any).key_takeaway])
+      : undefined,
   };
 });
 

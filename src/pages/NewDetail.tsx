@@ -32,7 +32,7 @@ export default function NewDetail() {
         title={article.title}
         body={article.body}
       />
-      <DetailKeyTakeaways />
+      <DetailKeyTakeaways keyTakeaways={article.keyTakeaways} />
       <DetailProfile sourceUrl={article.sourceUrl} />
     </>
   );
