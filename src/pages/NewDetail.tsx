@@ -33,7 +33,7 @@ export default function NewDetail() {
         body={article.body}
       />
       <DetailKeyTakeaways />
-      <DetailProfile />
+      <DetailProfile sourceUrl={article.sourceUrl} />
     </>
   );
 }

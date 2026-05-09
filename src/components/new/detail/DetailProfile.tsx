@@ -3,9 +3,12 @@ import { motion } from 'framer-motion';
 import { Facebook, ExternalLink } from 'lucide-react';
 import nawinAvatar from '../../../assets/new/nawin-avatar.jpg';
 
-const FACEBOOK_URL = 'https://www.facebook.com/NaiveInnova';
+interface DetailProfileProps {
+  sourceUrl?: string;
+}
 
-export default function DetailProfile() {
+export default function DetailProfile({ sourceUrl }: DetailProfileProps) {
+  const FACEBOOK_URL = sourceUrl || 'https://www.facebook.com/NaiveInnova';
   return (
     <section className="py-14 bg-white">
       <Container maxWidth="lg">
