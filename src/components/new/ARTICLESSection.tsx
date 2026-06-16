@@ -4,16 +4,9 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, Clock, TrendingUp, Tag } from 'lucide-react';
 import { newsArticles } from '../../config/newsArticles';
+import { useTranslation } from 'react-i18next';
 
 const MotionLink = motion(Link);
-
-// Popular sidebar — ใช้ 4 บทความแรกจาก data จริง
-const popular = newsArticles.slice(0, 4).map((a, i) => ({
-  num: String(i + 1).padStart(2, '0'),
-  title: a.title,
-  date: new Date(a.date).toLocaleDateString('th-TH', { month: 'short', year: 'numeric' }),
-  slug: a.slug,
-}));
 
 // Categories — นับจาก data จริง
 const categoryCount: Record<string, number> = {};
@@ -25,8 +18,17 @@ const categories = Object.entries(categoryCount).map(([label, count]) => ({ labe
 const PAGE_SIZE = 9;
 
 export default function ARTICLESSection() {
+  const { t, i18n } = useTranslation();
   const [currentPage, setCurrentPage] = useState(1);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
+
+  // Popular sidebar — ใช้ 4 บทความแรกจาก data จริง
+  const popular = newsArticles.slice(0, 4).map((a, i) => ({
+    num: String(i + 1).padStart(2, '0'),
+    title: a.title,
+    date: new Date(a.date).toLocaleDateString(i18n.language === 'en' ? 'en-US' : 'th-TH', { month: 'short', year: 'numeric' }),
+    slug: a.slug,
+  }));
 
   const filteredArticles = activeCategory
     ? newsArticles.filter((a) => a.category === activeCategory)
@@ -47,6 +49,7 @@ export default function ARTICLESSection() {
     setCurrentPage(1); // Reset to page 1 on filter change
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
   return (
     <section className="py-16 bg-slate-50">
       <Container maxWidth="lg">
@@ -59,10 +62,10 @@ export default function ARTICLESSection() {
               <div className="flex items-center gap-3">
                 <div className="w-1 h-6 rounded-full bg-gradient-to-b from-cyan-500 to-fuchsia-500" />
                 <Typography variant="h5" className="font-black text-slate-900 text-lg tracking-tight">
-                  {activeCategory ? `หมวดหมู่: ${activeCategory}` : 'บทความทั้งหมด'}
+                  {activeCategory ? `${t('articlesSection.categoryLabel')} ${activeCategory}` : t('articlesSection.allArticles')}
                 </Typography>
               </div>
-              <span className="text-xs font-bold text-slate-400">{filteredArticles.length} บทความ</span>
+              <span className="text-xs font-bold text-slate-400">{filteredArticles.length} {t('articlesSection.articlesCount')}</span>
             </div>
 
             {/* 3-column card grid */}
@@ -120,7 +123,7 @@ export default function ARTICLESSection() {
                       </div>
                       <div className="flex items-center gap-1 text-slate-300 shrink-0 ml-2">
                         <Clock size={10} />
-                        <span className="text-[10px] font-medium">{article.readingTime} นาที</span>
+                        <span className="text-[10px] font-medium">{article.readingTime} {t('articlesSection.readingTime')}</span>
                       </div>
                     </div>
                   </div>
@@ -200,7 +203,7 @@ export default function ARTICLESSection() {
             <div className="bg-white border-2 border-slate-100 rounded-2xl overflow-hidden">
               <div className="flex items-center gap-2.5 px-5 py-4 border-b-2 border-slate-100">
                 <TrendingUp size={15} className="text-cyan-600" />
-                <span className="text-sm font-black text-slate-800">บทความล่าสุด</span>
+                <span className="text-sm font-black text-slate-800">{t('articlesSection.latestArticles')}</span>
               </div>
               <div className="divide-y divide-slate-50">
                 {popular.map((p, idx) => (
@@ -227,7 +230,7 @@ export default function ARTICLESSection() {
             <div className="bg-white border-2 border-slate-100 rounded-2xl overflow-hidden">
               <div className="flex items-center gap-2.5 px-5 py-4 border-b-2 border-slate-100">
                 <Tag size={14} className="text-fuchsia-500" />
-                <span className="text-sm font-black text-slate-800">หมวดหมู่</span>
+                <span className="text-sm font-black text-slate-800">{t('articlesSection.categories')}</span>
               </div>
               <div className="p-4 flex flex-wrap gap-2">
                 {categories.map((cat, idx) => {

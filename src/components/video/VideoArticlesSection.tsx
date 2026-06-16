@@ -3,12 +3,23 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Play, ArrowRight, Youtube, Smartphone } from 'lucide-react';
 import { youtubeShorts } from '../../config/videos';
+import { useTranslation } from 'react-i18next';
+
+interface ShortItem {
+  id: string;
+  url: string;
+  thumbnail: string;
+  videoSrc: string;
+  titleKey: string;
+  views: string;
+  date: string;
+}
 
 // ── YouTube Videos ──
 
 
 // ── Shorts ──
-const shorts = youtubeShorts.map(s => ({
+const shorts: ShortItem[] = youtubeShorts.map(s => ({
   ...s,
   views: '24K+', // Placeholder views since we don't have them in config
   date: '2024'
@@ -18,11 +29,11 @@ const VISIBLE_DEFAULT = 4;
 
 
 
-function ShortCard({ short, idx }: { short: typeof shorts[0]; idx: number }) {
+function ShortCard({ short, idx }: { short: ShortItem; idx: number }) {
   return (
     <motion.a
       key={short.id}
-      href={(short as any).url || '#'}
+      href={short.url || '#'}
       target="_blank"
       rel="noopener noreferrer"
       initial={{ opacity: 0, scale: 0.9 }}
@@ -33,16 +44,16 @@ function ShortCard({ short, idx }: { short: typeof shorts[0]; idx: number }) {
     >
       {/* Fallback/Base Thumbnail Image */}
       <img
-        src={(short as any).thumbnail}
+        src={short.thumbnail}
         alt={`Shorts ${short.id}`}
         className="absolute inset-0 w-full h-full object-cover opacity-80 transition-all duration-1000 group-hover:scale-110 group-hover:opacity-0"
       />
 
       {/* Background Video with Poster */}
-      {(short as any).videoSrc && (
+      {short.videoSrc && (
         <video
-          src={(short as any).videoSrc}
-          poster={(short as any).thumbnail}
+          src={short.videoSrc}
+          poster={short.thumbnail}
           autoPlay
           muted
           loop
@@ -69,6 +80,7 @@ function ShortCard({ short, idx }: { short: typeof shorts[0]; idx: number }) {
 }
 
 export default function VideoArticlesSection() {
+  const { t } = useTranslation();
   const [showAllShorts, setShowAllShorts] = useState(false);
 
   const visibleShorts = showAllShorts ? shorts : shorts.slice(0, VISIBLE_DEFAULT);
@@ -87,9 +99,9 @@ export default function VideoArticlesSection() {
               </div>
               <div>
                 <Typography variant="h5" className="font-black text-slate-900 text-xl tracking-tight leading-none mb-0.5">
-                  วิดีโอแนะนำ
+                  {t('videoSection.recommendedTitle')}
                 </Typography>
-                <p className="text-xs text-slate-400 font-medium">เรื่องราวและนวัตกรรมเบื้องหลัง Naive Innova</p>
+                <p className="text-xs text-slate-400 font-medium">{t('videoSection.recommendedSub')}</p>
               </div>
             </div>
             <a
@@ -98,7 +110,7 @@ export default function VideoArticlesSection() {
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-red-600 transition-colors duration-200"
             >
-              ดูทั้งหมดใน YouTube <ArrowRight size={13} />
+              {t('videoSection.viewAllYoutube')} <ArrowRight size={13} />
             </a>
           </div>
 
@@ -135,9 +147,9 @@ export default function VideoArticlesSection() {
               </div>
               <div>
                 <Typography variant="h5" className="font-black text-slate-900 text-xl tracking-tight leading-none mb-0.5">
-                  วิดีโอ Shorts
+                  {t('videoSection.shortsTitle')}
                 </Typography>
-                <p className="text-xs text-slate-400 font-medium">{shorts.length} คลิป</p>
+                <p className="text-xs text-slate-400 font-medium">{t('videoSection.shortsCount', { count: shorts.length })}</p>
               </div>
             </div>
             <a
@@ -146,7 +158,7 @@ export default function VideoArticlesSection() {
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-fuchsia-600 transition-colors duration-200"
             >
-              ดูใน Shorts <ArrowRight size={13} />
+              {t('videoSection.watchShorts')} <ArrowRight size={13} />
             </a>
           </div>
 
@@ -166,7 +178,7 @@ export default function VideoArticlesSection() {
                 className="border border-slate-200 text-slate-600 hover:bg-slate-100 font-bold normal-case text-sm px-8 py-3 rounded-xl"
                 endIcon={<ArrowRight size={15} />}
               >
-                {showAllShorts ? 'แสดงน้อยลง' : `ดูเพิ่มเติม (${shorts.length - VISIBLE_DEFAULT} คลิป)`}
+                {showAllShorts ? t('videoSection.showLess') : t('videoSection.seeMore', { count: shorts.length - VISIBLE_DEFAULT })}
               </Button>
             </div>
           )}

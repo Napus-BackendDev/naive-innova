@@ -12,11 +12,12 @@ import CertifiedSection from '../components/product/CertifiedSection';
 import FAQSection from '../components/product/FAQSection';
 import ContactSection from '../components/ContactSection';
 import productsData from '../i18n/products/products-all.json';
+import type { Product as ProductType } from '../types/product';
 
 export default function Product() {
   const { productId } = useParams();
   
-  const product = productsData.products.find(p => p.id === productId);
+  const product = productsData.products.find(p => p.id === productId) as ProductType | undefined;
 
   if (!product) {
     return <Navigate to="/" replace />;

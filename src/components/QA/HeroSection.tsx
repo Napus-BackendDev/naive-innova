@@ -1,8 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import { Container, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import { HelpCircle } from 'lucide-react';
 
 export default function HeroSection() {
+  const { t } = useTranslation();
+
   return (
     <section className="relative pt-32 pb-20 bg-white overflow-hidden">
       {/* Decorative background gradients */}
@@ -18,7 +21,9 @@ export default function HeroSection() {
           {/* Eyebrow badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-50 border border-slate-200 mb-8 shadow-sm">
             <HelpCircle size={14} className="text-cyan-500" />
-            <span className="text-[11px] font-black uppercase tracking-[0.2em] text-cyan-600">Customer Support</span>
+            <span className="text-[11px] font-black uppercase tracking-[0.2em] text-cyan-600">
+              {t('qaHero.badge')}
+            </span>
           </div>
 
           {/* Large Editorial Title */}
@@ -32,7 +37,7 @@ export default function HeroSection() {
           {/* Minimal Subtitle */}
           <div className="max-w-2xl border-l-4 border-slate-100 pl-8 ml-2">
             <Typography variant="body1" className="text-xl md:text-2xl text-slate-400 font-medium leading-relaxed italic">
-              "We're here to help you navigate every step of your pet care brand journey. Find answers to our most common questions below."
+              {t('qaHero.subtitle')}
             </Typography>
           </div>
         </motion.div>

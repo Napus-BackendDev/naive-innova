@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Container, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import { ShieldCheck, Layers, Leaf } from 'lucide-react';
@@ -5,46 +6,46 @@ import { ShieldCheck, Layers, Leaf } from 'lucide-react';
 const techs = [
   {
     num: '01',
-    banger: 'Core · ใช้ในทุกสูตร',
+    bangerKey: 'innovationDetails.coreTechs.tech1.banger',
     icon: ShieldCheck,
     color: 'from-cyan-500 to-cyan-600',
     lightBg: 'bg-cyan-50',
     lightText: 'text-cyan-600',
     lightBorder: 'border-cyan-100',
-    title: 'EcoGuard Plus™',
-    content:
-      'สารต้านจุลชีพจากธรรมชาติในรูปแบบนาโน (Ethyl Lauroyl Arginate HCl) ยับยั้งแบคทีเรีย เชื้อรา และยีสต์แบบ Broad-spectrum ไม่ก่อการดื้อยา ย่อยสลายได้ทางชีวภาพ',
+    titleKey: 'innovationDetails.coreTechs.tech1.title',
+    contentKey: 'innovationDetails.coreTechs.tech1.content',
     tags: ['FDA USA', 'EFSA EU', '24h+ Activity'],
   },
   {
     num: '02',
-    banger: 'Delivery System',
+    bangerKey: 'innovationDetails.coreTechs.tech2.banger',
     icon: Layers,
     color: 'from-blue-500 to-fuchsia-500',
     lightBg: 'bg-blue-50',
     lightText: 'text-blue-600',
     lightBorder: 'border-blue-100',
-    title: 'Nano Encapsulation Technology',
-    content:
-      'ระบบห่อหุ้มสารสำคัญระดับนาโน ขนาดเฉลี่ย 84 นาโนเมตร เพิ่มการซึมผ่านผิว ควบคุมการปลดปล่อยสาร (Controlled Release) และยืดอายุการออกฤทธิ์ให้ยาวนาน',
+    titleKey: 'innovationDetails.coreTechs.tech2.title',
+    contentKey: 'innovationDetails.coreTechs.tech2.content',
     tags: ['84 nm', 'Controlled Release', 'PDI 0.232'],
   },
   {
     num: '03',
-    banger: 'Natural · Thai Herbs',
+    bangerKey: 'innovationDetails.coreTechs.tech3.banger',
     icon: Leaf,
     color: 'from-emerald-500 to-teal-500',
     lightBg: 'bg-emerald-50',
     lightText: 'text-emerald-600',
     lightBorder: 'border-emerald-100',
-    title: 'Herbal Active Complex',
-    content:
-      'ผสานสารสกัดสมุนไพรไทยพรีเมียมจากภาคเหนือ ไม่ว่าจะเป็น คาโมมาย ขมิ้นชัน พลูคาว มังคุด บัวบก และอื่นๆ ผ่านกระบวนการ Nano-Encapsulation เพื่อประสิทธิภาพสูงสุด',
+    titleKey: 'innovationDetails.coreTechs.tech3.title',
+    contentKey: 'innovationDetails.coreTechs.tech3.content',
     tags: ['100+ Active Ingredients', 'Thai Origin', 'Sustainable'],
   },
 ];
 
 export default function CORETECHSection() {
+  const { t, i18n } = useTranslation();
+  const isEn = i18n.language === 'en';
+
   return (
     <section className="py-24 bg-slate-50 relative overflow-hidden">
       {/* Background decoration */}
@@ -64,15 +65,15 @@ export default function CORETECHSection() {
               <span className="text-xs font-black uppercase tracking-[0.2em] text-slate-500">Core Technologies</span>
             </div>
             <Typography variant="h2" className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 mb-6 tracking-tight leading-tight">
-              3 เทคโนโลยีที่ทำให้สูตร{' '}
+              {t('innovationDetails.coreTechs.differentTitle')}{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-fuchsia-500">
-                แตกต่างอย่างแท้จริง
+                {t('innovationDetails.coreTechs.differentSub')}
               </span>
             </Typography>
             <Typography variant="body1" className="text-slate-500 text-lg leading-relaxed font-medium">
-              ทุกผลิตภัณฑ์ของ Naive Innova ถูกออกแบบบนพื้นฐาน{' '}
+              {isEn ? 'Every Naive Innova product is designed based on ' : 'ทุกผลิตภัณฑ์ของ Naive Innova ถูกออกแบบบนพื้นฐาน '}
               <span className="font-bold text-slate-700">SCIENCE × SAFETY × SUSTAINABILITY</span>{' '}
-              ใช้เทคโนโลยีที่คู่แข่งเลียนแบบได้ยาก
+              {isEn ? 'using technology that is difficult for competitors to copy.' : 'ใช้เทคโนโลยีที่คู่แข่งเลียนแบบได้ยาก'}
             </Typography>
           </motion.div>
         </div>
@@ -99,7 +100,7 @@ export default function CORETECHSection() {
                       {tech.num}
                     </span>
                     <div className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest ${tech.lightBg} ${tech.lightText} border ${tech.lightBorder}`}>
-                      {tech.banger}
+                      {t(tech.bangerKey)}
                     </div>
                   </div>
 
@@ -109,13 +110,13 @@ export default function CORETECHSection() {
                       <tech.icon size={22} strokeWidth={1.75} />
                     </div>
                     <Typography variant="h5" className="text-xl font-black text-slate-900 leading-snug tracking-tight">
-                      {tech.title}
+                      {t(tech.titleKey)}
                     </Typography>
                   </div>
 
                   {/* Content */}
                   <Typography variant="body2" className="text-slate-500 text-sm leading-relaxed mb-8 flex-1">
-                    {tech.content}
+                    {t(tech.contentKey)}
                   </Typography>
 
                   {/* Tags */}
@@ -151,7 +152,7 @@ export default function CORETECHSection() {
             <div className="flex-1">
               <div className="text-xs font-black uppercase tracking-[0.2em] text-slate-400 mb-3">Philosophy</div>
               <p className="text-slate-800 text-lg md:text-xl font-bold leading-relaxed">
-                "ผลิตภัณฑ์สัตว์เลี้ยงที่ดี ต้องปลอดภัยก่อน แล้วจึงค่อยมีประสิทธิภาพ"
+                {t('innovationDetails.coreTechs.philosophyQuote')}
               </p>
             </div>
 

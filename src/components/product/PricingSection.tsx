@@ -1,8 +1,9 @@
 import { Typography, Container, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import type { Product } from '../../types/product';
 
-export default function PricingSection({ product }: { product: any }) {
+export default function PricingSection({ product }: { product: Product }) {
   const { t, i18n } = useTranslation();
   const isEn = i18n.language === 'en';
 
@@ -72,7 +73,7 @@ export default function PricingSection({ product }: { product: any }) {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {product.pricing.map((row: any, index: number) => (
+                {product.pricing.map((row, index: number) => (
                   <TableRow
                     key={index}
                     className="hover:bg-slate-50/50 transition-colors duration-300"
@@ -101,14 +102,14 @@ export default function PricingSection({ product }: { product: any }) {
             <div className="w-2 h-2 rounded-full bg-cyan-500" />
             <span className="text-sm font-bold text-slate-500">
               {isEn ? 'MOQ starts at: ' : 'ขั้นต่ำเริ่มต้น: '}
-              {product.moq}
+              {isEn ? (product.moqEn || product.moq) : product.moq}
             </span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-fuchsia-500" />
             <span className="text-sm font-bold text-slate-500">
               {isEn ? 'Lead Time: ' : 'ระยะเวลาผลิต: '}
-              {product.leadTime}
+              {isEn ? (product.leadTimeEn || product.leadTime) : product.leadTime}
             </span>
           </div>
           <div className="flex items-center gap-2">

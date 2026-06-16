@@ -3,9 +3,11 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { FlaskConical, ClipboardCheck, Timer } from 'lucide-react';
 
+import type { Product } from '../../types/product';
+
 const icons = [FlaskConical, ClipboardCheck, Timer];
 
-export default function ResultsSection({ product }: { product: any }) {
+export default function ResultsSection({ product }: { product: Product }) {
   const { t, i18n } = useTranslation();
   const isEn = i18n.language === 'en';
 
@@ -44,7 +46,7 @@ export default function ResultsSection({ product }: { product: any }) {
           product.testResults?.length === 2 ? 'lg:grid-cols-2' : 
           'lg:grid-cols-3'
         } gap-8 justify-center`}>
-          {product.testResults.map((item: any, index: number) => {
+          {product.testResults.map((item, index: number) => {
             const IconComponent = icons[index % icons.length] || FlaskConical;
             const lab = isEn ? (item.labEn || item.lab) : item.lab;
             const test = isEn ? (item.testEn || item.test) : item.test;

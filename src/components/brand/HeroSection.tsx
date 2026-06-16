@@ -13,8 +13,8 @@ export default function HeroSection() {
   ];
 
   const pills = [
-    { icon: FlaskConical, label: 'R&D นาโนเทคโนโลยี' },
-    { icon: Package, label: 'MOQ 100 ชิ้น' },
+    { icon: FlaskConical, label: t('brandingPage.pills.nano') },
+    { icon: Package, label: t('brandingPage.pills.moq') },
     { icon: Sparkles, label: 'FDA + EFSA Certified' },
   ];
 

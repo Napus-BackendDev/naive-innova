@@ -1,7 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import { Container, Typography } from '@mui/material';
 import { MapPin, Plane, Bus, Car, ExternalLink, Copy } from 'lucide-react';
 
 export default function MapSection() {
+  const { t } = useTranslation();
+
   return (
     <section className="py-24 bg-white relative">
       <Container maxWidth="lg">
@@ -9,7 +12,7 @@ export default function MapSection() {
         <div className="flex items-center gap-2 mb-8">
           <MapPin size={20} className="text-fuchsia-600" />
           <Typography variant="h5" className="font-black text-slate-800 tracking-tight">
-            แผนที่โรงงาน · Naive Innova เชียงราย
+            {t('contentPage.mapTitle')}
           </Typography>
         </div>
 
@@ -39,14 +42,14 @@ export default function MapSection() {
                 className="flex items-center gap-2 px-5 py-2.5 bg-white border-2 border-slate-900 text-slate-900 text-xs font-black hover:bg-slate-50 transition-colors"
                >
                 <ExternalLink size={14} />
-                เปิดใน Google Maps
+                {t('contentPage.btnOpenMap')}
               </a>
               <button 
-                onClick={() => navigator.clipboard.writeText('144/1 หมู่ 1 ต.สายเหนือ อ.พาน จ.เชียงราย 57120')}
+                onClick={() => navigator.clipboard.writeText(t('contentPage.addressText'))}
                 className="flex items-center gap-2 px-5 py-2.5 bg-white border-2 border-slate-900 text-slate-900 text-xs font-black hover:bg-slate-50 transition-colors"
               >
                 <Copy size={14} className="text-fuchsia-600" />
-                คัดลอกที่อยู่
+                {t('contentPage.btnCopyAddress')}
               </button>
             </div>
           </div>
@@ -55,50 +58,66 @@ export default function MapSection() {
           <div className="flex flex-col gap-6">
             {/* Address Box */}
             <div className="bg-[#EFECE6] border-2 border-slate-900 p-6 shadow-[4px_4px_0_rgba(15,23,42,1)]">
-              <div className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-3">ที่อยู่</div>
+              <div className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-3">
+                {t('contentPage.labelAddress')}
+              </div>
               <div className="font-bold text-slate-800 text-sm leading-relaxed">
-                144/1 หมู่ 1<br />
-                ต.สายเหนือ อ.พาน<br />
-                จ.เชียงราย 57120
+                {t('contentPage.addressText')}
               </div>
             </div>
 
             {/* Operating Hours */}
             <div className="bg-white border-2 border-slate-200 p-6">
-              <div className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4">เวลาทำการ</div>
+              <div className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4">
+                {t('contentPage.labelWorkingTime')}
+              </div>
 
               <div className="space-y-4">
                 <div>
-                  <div className="font-black text-slate-800 text-xs mb-1">จันทร์ – ศุกร์</div>
-                  <div className="text-slate-500 text-xs font-medium">09:00 – 17:30 น.</div>
+                  <div className="font-black text-slate-800 text-xs mb-1">
+                    {t('contentPage.daysWeekday')}
+                  </div>
+                  <div className="text-slate-500 text-xs font-medium">
+                    {t('contentPage.hoursWeekday')}
+                  </div>
                 </div>
                 <div>
-                  <div className="font-black text-slate-800 text-xs mb-1">เสาร์</div>
-                  <div className="text-slate-500 text-xs font-medium">09:00 – 12:00 น. (นัดล่วงหน้า)</div>
+                  <div className="font-black text-slate-800 text-xs mb-1">
+                    {t('contentPage.daysSaturday')}
+                  </div>
+                  <div className="text-slate-500 text-xs font-medium">
+                    {t('contentPage.hoursSaturday')}
+                  </div>
                 </div>
                 <div>
-                  <div className="font-black text-slate-400 text-xs mb-1">อาทิตย์</div>
-                  <div className="text-slate-400 text-xs font-medium">ปิดทำการ</div>
+                  <div className="font-black text-slate-400 text-xs mb-1">
+                    {t('contentPage.daysSunday')}
+                  </div>
+                  <div className="text-slate-400 text-xs font-medium">
+                    {t('contentPage.hoursSunday')}
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Travel Info */}
             <div className="bg-white border-2 border-slate-200 p-6">
-              <div className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4">เดินทางจาก</div>
+              <div className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4">
+                {t('contentPage.labelTravel')}
+              </div>
 
               <div className="space-y-3">
                 <div className="flex items-center gap-2 text-xs font-medium text-slate-600">
                   <Car size={14} className="text-slate-800 shrink-0" />
-                  <span>เชียงราย เมือง <span className="text-slate-300 mx-1">→</span> 45 นาที</span>
+                  <span>{t('contentPage.travelCity')} <span className="text-slate-300 mx-1">→</span> {t('contentPage.travelTime45')}</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs font-medium text-slate-600">
                   <Plane size={14} className="text-cyan-600 shrink-0" />
-                  <span>สนามบินเชียงราย <span className="text-slate-300 mx-1">→</span> 35 นาที</span>
+                  <span>{t('contentPage.travelAirport')} <span className="text-slate-300 mx-1">→</span> {t('contentPage.travelTime35')}</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs font-medium text-slate-600">
                   <Bus size={14} className="text-fuchsia-600 shrink-0" />
-                  <span>ขนส่ง พาน <span className="text-slate-300 mx-1">→</span> 10 นาที</span>
+                  <span>{t('contentPage.travelBus')} <span className="text-slate-300 mx-1">→</span> {t('contentPage.travelTime10')}</span>
                 </div>
               </div>
             </div>

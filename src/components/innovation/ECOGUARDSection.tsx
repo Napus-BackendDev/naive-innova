@@ -1,43 +1,46 @@
+import { useTranslation } from 'react-i18next';
 import { Container, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
 import ecoguardNano from '../../assets/innovation/ecoguard-nano.png';
 
 const specs = [
-  { label: 'AVERAGE DIAMETER', value: '84.14', unit: 'nm', sub: 'ขนาดอนุภาคนาโน ± 0.75 nm' },
-  { label: 'PDI (ความสม่ำเสมอ)', value: '0.232', unit: '', sub: '± 0.007 | กระจายตัวสม่ำเสมอ' },
-  { label: 'ZETA POTENTIAL', value: '53.19', unit: 'mV', sub: '± 6.8 | ความเสถียรสูง' },
-  { label: 'SHELF LIFE', value: '12+', unit: 'เดือน', sub: '15–25°C ในภาชนะปิดสนิท' },
+  { label: 'AVERAGE DIAMETER', value: '84.14', unit: 'nm', subKey: 'innovationDetails.ecoguard.specs.diameterSub' },
+  { label: 'PDI (ความสม่ำเสมอ)', value: '0.232', unit: '', subKey: 'innovationDetails.ecoguard.specs.pdiSub', labelKey: 'innovationDetails.ecoguard.specs.pdiLabel' },
+  { label: 'ZETA POTENTIAL', value: '53.19', unit: 'mV', subKey: 'innovationDetails.ecoguard.specs.zetaSub' },
+  { label: 'SHELF LIFE', value: '12+', unitKey: 'innovationDetails.ecoguard.specs.shelfLifeUnit', subKey: 'innovationDetails.ecoguard.specs.shelfLifeSub' },
   { label: 'CONCENTRATION', value: '50,000', unit: 'ppm', sub: 'Dose Recommendation: 200 ppm' },
-  { label: 'RECOMMENDED USE', value: '0.5–2', unit: '%', sub: 'ใช้ได้กับสูตรน้ำทุกประเภท' },
+  { label: 'RECOMMENDED USE', value: '0.5–2', unit: '%', subKey: 'innovationDetails.ecoguard.specs.recommendedUseSub' },
 ];
 
 const howItWorks = [
   {
     num: '01',
-    title: 'Bio-adhesive เกาะผิว',
-    desc: 'อนุภาคนาโน ELA เกาะติดผิวหนังสัตว์เลี้ยงอย่างมีประสิทธิภาพ ออกฤทธิ์ได้ยาวนานกว่า 24 ชั่วโมง',
+    titleKey: 'innovationDetails.ecoguard.howItWorks.step1Title',
+    descKey: 'innovationDetails.ecoguard.howItWorks.step1Desc',
   },
   {
     num: '02',
-    title: 'ทำลายเยื่อหุ้มเซลล์แบคทีเรีย',
-    desc: 'กลไก Physical disruption ไม่ใช้ยาปฏิชีวนะ จึงไม่ก่อการดื้อยา (Non-inducible resistance)',
+    titleKey: 'innovationDetails.ecoguard.howItWorks.step2Title',
+    descKey: 'innovationDetails.ecoguard.howItWorks.step2Desc',
   },
   {
     num: '03',
-    title: 'ย่อยสลายได้ทางชีวภาพ',
-    desc: 'ไม่สะสมในสิ่งแวดล้อม ไม่เป็นพิษต่อสัตว์น้ำ — แนวทาง Green Chemistry',
+    titleKey: 'innovationDetails.ecoguard.howItWorks.step3Title',
+    descKey: 'innovationDetails.ecoguard.howItWorks.step3Desc',
   },
 ];
 
 const coverage = [
-  { name: 'MRSP / MSSP', sub: 'แบคทีเรียเดี่ยงยาในสัตว์เลี้ยง' },
-  { name: 'Pseudomonas / E.coli', sub: 'แบคทีเรีย Gram-negative' },
-  { name: 'Malassezia', sub: 'ยีสต์สาเหตุอาการคัน' },
-  { name: 'Molds & Fungi', sub: 'เชื้อราวงกว้างสเปกตรัม' },
+  { name: 'MRSP / MSSP', subKey: 'innovationDetails.ecoguard.coverage.mrspSub' },
+  { name: 'Pseudomonas / E.coli', subKey: 'innovationDetails.ecoguard.coverage.gramNegSub' },
+  { name: 'Malassezia', subKey: 'innovationDetails.ecoguard.coverage.yeastSub' },
+  { name: 'Molds & Fungi', subKey: 'innovationDetails.ecoguard.coverage.fungiSub' },
 ];
 
 export default function ECOGUARDSection() {
+  const { t } = useTranslation();
+
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan-50/40 rounded-full blur-[120px] -translate-x-1/3 -translate-y-1/3 pointer-events-none" />
@@ -56,9 +59,9 @@ export default function ECOGUARDSection() {
             <span className="text-xs font-black uppercase tracking-[0.2em] text-slate-500">Technology 01</span>
           </div>
           <Typography variant="h2" className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 mb-4 tracking-tight leading-tight">
-            EcoGuard Plus™{' '}
+            {t('innovationDetails.ecoguard.title')}{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-fuchsia-500">
-              สารต้านจุลชีพจากธรรมชาติ
+              {t('innovationDetails.ecoguard.subtitle')}
             </span>
           </Typography>
           <p className="text-slate-400 text-sm font-medium tracking-wide">
@@ -94,12 +97,18 @@ export default function ECOGUARDSection() {
             <div className="grid grid-cols-2 gap-px bg-slate-100 rounded-2xl overflow-hidden border-2 border-slate-100">
               {specs.map((spec, idx) => (
                 <div key={idx} className="bg-white px-5 py-4 hover:bg-slate-50 transition-colors duration-200">
-                  <div className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400 mb-1">{spec.label}</div>
+                  <div className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400 mb-1">
+                    {spec.labelKey ? t(spec.labelKey) : spec.label}
+                  </div>
                   <div className="text-2xl font-black text-slate-900 tracking-tight">
                     {spec.value}
-                    <span className="text-base font-bold text-cyan-600 ml-1">{spec.unit}</span>
+                    <span className="text-base font-bold text-cyan-600 ml-1">
+                      {spec.unitKey ? t(spec.unitKey) : spec.unit}
+                    </span>
                   </div>
-                  <div className="text-[11px] text-slate-400 font-medium mt-0.5">{spec.sub}</div>
+                  <div className="text-[11px] text-slate-400 font-medium mt-0.5">
+                    {spec.subKey ? t(spec.subKey) : spec.sub}
+                  </div>
                 </div>
               ))}
             </div>
@@ -117,7 +126,9 @@ export default function ECOGUARDSection() {
             <div className="rounded-2xl border-2 border-slate-100 overflow-hidden">
               {/* Header */}
               <div className="bg-gradient-to-r from-cyan-500 to-fuchsia-500 px-6 py-3">
-                <span className="text-[11px] font-black uppercase tracking-[0.2em] text-white">ทำงานอย่างไร?</span>
+                <span className="text-[11px] font-black uppercase tracking-[0.2em] text-white">
+                  {t('innovationDetails.ecoguard.workingHeader')}
+                </span>
               </div>
 
               <div className="divide-y divide-slate-50">
@@ -125,8 +136,8 @@ export default function ECOGUARDSection() {
                   <div key={idx} className="flex gap-4 px-6 py-5 hover:bg-slate-50 transition-colors duration-200">
                     <span className="text-[11px] font-black text-slate-300 shrink-0 mt-0.5 w-5">{item.num}</span>
                     <div>
-                      <div className="font-black text-slate-900 text-sm mb-1">{item.title}</div>
-                      <div className="text-slate-500 text-xs leading-relaxed">{item.desc}</div>
+                      <div className="font-black text-slate-900 text-sm mb-1">{t(item.titleKey)}</div>
+                      <div className="text-slate-500 text-xs leading-relaxed">{t(item.descKey)}</div>
                     </div>
                   </div>
                 ))}
@@ -145,7 +156,7 @@ export default function ECOGUARDSection() {
                       <CheckCircle2 size={13} className="text-cyan-500 shrink-0" />
                       <span className="font-black text-slate-800 text-sm group-hover:text-cyan-700 transition-colors">{item.name}</span>
                     </div>
-                    <div className="text-[11px] text-slate-400 pl-5">{item.sub}</div>
+                    <div className="text-[11px] text-slate-400 pl-5">{t(item.subKey)}</div>
                   </div>
                 ))}
               </div>

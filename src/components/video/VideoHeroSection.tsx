@@ -1,8 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import { Container, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import { Play } from 'lucide-react';
 
 export default function VideoHeroSection() {
+  const { t } = useTranslation();
+
   return (
     <section className="relative pt-32 pb-16 bg-white overflow-hidden">
       {/* Dynamic background decoration */}
@@ -22,7 +25,7 @@ export default function VideoHeroSection() {
               <Play size={16} className="text-white fill-current translate-x-0.5" />
             </div>
             <span className="text-[11px] font-black uppercase tracking-[0.25em] text-slate-400">
-              Naive Innova · Video Library
+              {t('videoHero.badge')}
             </span>
           </motion.div>
 
@@ -38,10 +41,10 @@ export default function VideoHeroSection() {
               className="text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.06] tracking-tight"
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 via-purple-600 to-cyan-600">
-                Insights &amp; Innovation
+                {t('videoHero.titlePrefix')}
               </span>
               <br />
-              <span className="text-slate-900">in Motion.</span>
+              <span className="text-slate-900">{t('videoHero.titleSuffix')}</span>
             </Typography>
           </motion.div>
 
@@ -56,9 +59,7 @@ export default function VideoHeroSection() {
               variant="body1"
               className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium"
             >
-              Explore our deep-tech ecosystem through cinematic lenses. 
-              From R&amp;D breakthroughs to expert branding masterclasses—see 
-              how we redefine pet care innovation.
+              {t('videoHero.subtitle')}
             </Typography>
           </motion.div>
 
@@ -71,7 +72,7 @@ export default function VideoHeroSection() {
           >
              <div className="w-1.5 h-8 bg-fuchsia-500 rounded-full" />
              <Typography variant="h3" className="text-2xl font-black text-slate-900 uppercase tracking-tight">
-               Recent Uploads
+               {t('videoHero.recentUploads')}
              </Typography>
           </motion.div>
         </div>

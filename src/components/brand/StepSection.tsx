@@ -19,16 +19,16 @@ export default function StepSection() {
           >
             <div className="inline-block px-4 py-1.5 rounded-full bg-white border border-slate-200 mb-8 shadow-sm">
               <span className="text-sm font-bold text-slate-500 tracking-[0.2em] uppercase">
-                The 6-Step Process
+                {t('brandingPage.stepsTitle')}
               </span>
             </div>
 
             <Typography variant="h2" className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 mb-6 tracking-tight leading-tight">
-              จากไอเดีย สู่สินค้าพร้อมขาย
+              {t('brandingPage.stepSectionTitle')}
             </Typography>
 
             <Typography variant="body1" className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto font-medium">
-              กระบวนการที่เราออกแบบมาเพื่อ SME โดยเฉพาะ — เรียบง่าย โปร่งใส และมีงานวิจัยรองรับทุกขั้น
+              {t('brandingPage.stepSectionSubtitle')}
             </Typography>
           </motion.div>
         </div>
@@ -90,9 +90,9 @@ export default function StepSection() {
             </div>
             {/* Text */}
             <div className="relative z-10">
-              <div className="text-xs font-black uppercase tracking-widest text-cyan-600 mb-1">แถมฟรี!</div>
-              <div className="text-xl font-black text-slate-900 leading-tight">ซีลพลาสติก (Shrink Film)</div>
-              <div className="text-sm text-slate-500 font-medium mt-1">สำหรับทุกยอดการสั่งผลิต</div>
+              <div className="text-xs font-black uppercase tracking-widest text-cyan-600 mb-1">{t('brandingPage.bonusFree')}</div>
+              <div className="text-xl font-black text-slate-900 leading-tight">{t('brandingPage.bonusDetail')}</div>
+              <div className="text-sm text-slate-500 font-medium mt-1">{t('brandingPage.bonusSub')}</div>
             </div>
           </div>
         </motion.div>

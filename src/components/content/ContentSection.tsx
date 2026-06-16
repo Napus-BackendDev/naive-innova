@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Container, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import { MessageCircle, Phone, Mail, Send, Facebook, Youtube } from 'lucide-react';
@@ -9,6 +10,8 @@ const TikTokIcon = ({ size = 20, className = "" }) => (
 );
 
 export default function ContentSection() {
+  const { t } = useTranslation();
+
   return (
     <section className="py-24 bg-slate-50 relative overflow-hidden">
       {/* Background decoration */}
@@ -24,14 +27,19 @@ export default function ContentSection() {
         >
           {/* Eyebrow */}
           <div className="inline-block px-4 py-1.5 rounded-full bg-white border border-slate-200 mb-6 shadow-sm">
-            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-600">Get in Touch</span>
+            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-600">
+              {t('contentPage.getInTouch')}
+            </span>
           </div>
 
           <Typography variant="h2" className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
-            ส่งข้อความถึง<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-fuchsia-500">ทีมงาน</span>
+            {t('contentPage.titlePrefix')}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-fuchsia-500">
+              {t('contentPage.titleSpan')}
+            </span>
           </Typography>
           <Typography variant="body1" className="text-slate-500 font-medium">
-            มีข้อสงสัยหรือต้องการสอบถามเกี่ยวกับการสร้างแบรนด์? ฝากข้อความไว้ได้เลย
+            {t('contentPage.subtitle')}
           </Typography>
         </motion.div>
 
@@ -51,7 +59,7 @@ export default function ContentSection() {
                 {/* Name */}
                 <div className="flex flex-col gap-2">
                   <label className="text-xs font-black text-slate-800 uppercase tracking-widest pl-1">
-                    ชื่อ - นามสกุล <span className="text-fuchsia-500">*</span>
+                    {t('contentPage.labelName')} <span className="text-fuchsia-500">*</span>
                   </label>
                   <input
                     type="text"
@@ -63,7 +71,7 @@ export default function ContentSection() {
                 {/* Email */}
                 <div className="flex flex-col gap-2">
                   <label className="text-xs font-black text-slate-800 uppercase tracking-widest pl-1">
-                    อีเมล <span className="text-fuchsia-500">*</span>
+                    {t('contentPage.labelEmail')} <span className="text-fuchsia-500">*</span>
                   </label>
                   <input
                     type="email"
@@ -76,15 +84,15 @@ export default function ContentSection() {
               {/* Subject */}
               <div className="flex flex-col gap-2">
                 <label className="text-xs font-black text-slate-800 uppercase tracking-widest pl-1">
-                  หัวข้อที่ต้องการติดต่อ <span className="text-fuchsia-500">*</span>
+                  {t('contentPage.labelSubject')} <span className="text-fuchsia-500">*</span>
                 </label>
                 <div className="relative">
                   <select className="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-5 py-3.5 text-sm font-medium text-slate-800 appearance-none focus:outline-none focus:border-cyan-400 focus:bg-white transition-colors cursor-pointer">
-                    <option value="" disabled selected>เลือกหัวข้อ...</option>
-                    <option value="oem">ปรึกษาการทำแบรนด์ (OEM)</option>
-                    <option value="formulation">พัฒนาสูตรเฉพาะ (R&D)</option>
-                    <option value="factory">เยี่ยมชมโรงงาน</option>
-                    <option value="other">อื่นๆ</option>
+                    <option value="" disabled selected>{t('contentPage.selectSubject')}</option>
+                    <option value="oem">{t('contentPage.optOem')}</option>
+                    <option value="formulation">{t('contentPage.optRd')}</option>
+                    <option value="factory">{t('contentPage.optFactory')}</option>
+                    <option value="other">{t('contentPage.optOther')}</option>
                   </select>
                   <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
                     ▼
@@ -95,11 +103,11 @@ export default function ContentSection() {
               {/* Message */}
               <div className="flex flex-col gap-2">
                 <label className="text-xs font-black text-slate-800 uppercase tracking-widest pl-1">
-                  รายละเอียด <span className="text-fuchsia-500">*</span>
+                  {t('contentPage.labelDetail')} <span className="text-fuchsia-500">*</span>
                 </label>
                 <textarea
                   rows={5}
-                  placeholder="เขียนข้อความหรือรายละเอียดที่คุณต้องการสอบถาม..."
+                  placeholder={t('contentPage.placeholderDetail')}
                   className="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-5 py-3.5 text-sm font-medium text-slate-800 focus:outline-none focus:border-cyan-400 focus:bg-white transition-colors resize-none"
                 />
               </div>
@@ -109,11 +117,11 @@ export default function ContentSection() {
                 type="submit"
                 className="mt-2 w-full lg:w-auto self-start bg-slate-900 hover:bg-cyan-600 text-white font-bold text-sm px-8 py-4 rounded-xl flex items-center justify-center gap-3 transition-all duration-300 group"
               >
-                ส่งข้อความ
+                {t('contentPage.btnSend')}
                 <Send size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </button>
               <p className="text-[10px] text-slate-400 font-medium mt-1">
-                ข้อมูลของคุณจะถูกเก็บเป็นความลับและไม่ถูกนำไปเผยแพร่
+                {t('contentPage.confidentialNote')}
               </p>
             </form>
           </motion.div>
@@ -141,7 +149,7 @@ export default function ContentSection() {
                   </div>
                   <div className="text-xs text-slate-500 font-medium mt-1.5 flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    ตอบเร็วที่สุด · ตลอดเวลาทำการ
+                    {t('contentPage.lineResponse')}
                   </div>
                 </div>
               </div>
@@ -154,7 +162,7 @@ export default function ContentSection() {
               </div>
               <div>
                 <div className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-1">
-                  โทรศัพท์
+                  {t('contentPage.labelPhone')}
                 </div>
                 <div className="text-lg font-black text-slate-900 leading-tight">
                   087-714-9262
@@ -163,7 +171,7 @@ export default function ContentSection() {
                   094-888-1184 · 052-102-588
                 </div>
                 <div className="mt-3 inline-block px-3 py-1 bg-slate-50 rounded text-[10px] text-slate-500 font-bold uppercase tracking-wider border border-slate-100">
-                  จ.–ศ. 09:00–17:30
+                  {t('contentPage.workingHours')}
                 </div>
               </div>
             </div>
@@ -175,13 +183,13 @@ export default function ContentSection() {
               </div>
               <div>
                 <div className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-1">
-                  อีเมล
+                  {t('contentPage.labelEmail')}
                 </div>
                 <div className="text-base font-black text-slate-900 group-hover:text-blue-600 transition-colors">
                   info@naiveinnova.com
                 </div>
                 <div className="text-xs text-slate-500 font-medium mt-1.5">
-                  ตอบภายใน 24 ชม. ทุกวันทำการ
+                  {t('contentPage.emailResponse')}
                 </div>
               </div>
             </a>
@@ -213,7 +221,6 @@ export default function ContentSection() {
               </a>
             </div>
           </motion.div>
-
 
         </div>
       </Container>

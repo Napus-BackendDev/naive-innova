@@ -3,9 +3,11 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Flower2, Zap, ShieldAlert, Leaf, Atom } from 'lucide-react';
 
+import type { Product } from '../../types/product';
+
 const icons = [Flower2, Zap, ShieldAlert, Leaf];
 
-export default function KeySection({ product }: { product: any }) {
+export default function KeySection({ product }: { product: Product }) {
   const { t, i18n } = useTranslation();
   const isEn = i18n.language === 'en';
 
@@ -46,7 +48,7 @@ export default function KeySection({ product }: { product: any }) {
             'lg:grid-cols-4'
           } relative bg-white border border-slate-100 rounded-[2rem] shadow-xl shadow-slate-200/50 divide-y lg:divide-y-0 lg:divide-x divide-slate-100 overflow-hidden`}
         >
-          {product.ingredients && product.ingredients.map((item: any, index: number) => {
+          {product.ingredients && product.ingredients.map((item, index: number) => {
             const IconComponent = icons[index % icons.length] || Atom;
             const name = isEn ? (item.nameEn || item.name) : item.name;
             const desc = isEn ? (item.descEn || item.desc) : item.desc;

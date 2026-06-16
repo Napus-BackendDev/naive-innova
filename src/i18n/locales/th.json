@@ -376,6 +376,10 @@
     "heroSubtitle": "ตั้งแต่ไอเดียในหัว จนถึงสินค้าวางขายหน้าร้าน — เราเดินเคียงข้างคุณทุกขั้นตอน\nด้วยทีม R&D นาโน เทคโนโลยีนวัตกรรมที่ผ่านการทดสอบ และโรงงานเชียงรายที่พร้อมผลิต",
     "heroBtnStart": "เริ่มต้นสร้างแบรนด์",
     "heroBtnSteps": "ดูขั้นตอนทั้งหมด",
+    "pills": {
+      "nano": "R&D นาโนเทคโนโลยี",
+      "moq": "MOQ 100 ชิ้น"
+    },
     "statTimeTitle": "30-45 วัน",
     "statTimeDesc": "จากไอเดีย → สินค้าในมือ",
     "statMoqTitle": "100 ชิ้น",
@@ -401,12 +405,95 @@
     "diff2": "Proprietary Nano-Tech",
     "diff2Desc": "เจ้าเดียวที่ใช้เทคโนโลยีนาโนขนาด 84nm และสารสกัด EcoGuard Plus ที่ผ่านการทดสอบทางคลินิก",
     "diff3": "High-End Sourcing",
-    "diff3Desc": "เข้าถึงสมุนไพรออร์แกนิกเกรดพรีเมียมจากแหล่งปลูกที่ดีที่สุดในเชียงรายโดยตรง"
+    "diff3Desc": "เข้าถึงสมุนไพรออร์แกนิกเกรดพรีเมียมจากแหล่งปลูกที่ดีที่สุดในเชียงรายโดยตรง",
+    "stepSectionTitle": "จากไอเดีย สู่สินค้าพร้อมขาย",
+    "stepSectionSubtitle": "กระบวนการที่เราออกแบบมาเพื่อ SME โดยเฉพาะ — เรียบง่าย โปร่งใส และมีงานวิจัยรองรับทุกขั้น",
+    "bonusFree": "แถมฟรี!",
+    "bonusDetail": "ซีลพลาสติก (Shrink Film)",
+    "bonusSub": "สำหรับทุกยอดการสั่งผลิต",
+    "stepsDetailTitle": "รายละเอียดแต่ละขั้นตอน",
+    "stepsDetailSubtitle": "รายละเอียด",
+    "stepsDetail": {
+      "step1": {
+        "badge": "การปรึกษา",
+        "title": "ปรึกษาและ วางกลยุทธ์",
+        "subtitle": "นัดคุยกับทีมเพื่อเข้าใจ Vision ของแบรนด์คุณ พร้อมคำแนะนำด้านการตลาด การวางตำแหน่ง และช่วยประเมินงบประมาณให้ชัดเจน ไม่ต้องเริ่มจากศูนย์",
+        "item1": "นัดคุยฟรี — ผ่าน LINE, โทรศัพท์ หรือเข้าโรงงาน",
+        "item2": "ประเมินงบสร้างแบรนด์ฟรี — บอกงบที่มี เราวางแผนให้",
+        "item3": "ให้คำแนะนำด้าน Product-Market Fit และโพสิชันนิ่งแบรนด์",
+        "meta1Label": "ระยะเวลา",
+        "meta1Value": "1 วัน",
+        "meta2Label": "ค่าใช้จ่าย",
+        "meta2Value": "ฟรี"
+      },
+      "step2": {
+        "badge": "การพัฒนาสูตร",
+        "title": "เลือกหรือ พัฒนาสูตร",
+        "subtitle": "เลือกจาก Nano Ingredient Library กว่า 50 สูตร ที่ validated แล้ว หรือให้ทีม R&D พัฒนาสูตรใหม่เฉพาะคุณ หากคุณมีสูตรเดิมอยู่แล้ว เราช่วย Nano-upgrade เพื่อยกระดับประสิทธิภาพ",
+        "item1": "Nano-Encapsulation 84 นาโนเมตร — สารซึมลึก ออกฤทธิ์นานขึ้น",
+        "item2": "EcoGuard Plus — สารฆ่าเชื้อจาก FDA USA + EFSA EU",
+        "item3": "วัตถุดิบสมุนไพรเหนือ: ดอยคาโมมาย มังคุด ขมิ้นชัน",
+        "meta1Label": "ระยะเวลา",
+        "meta1Value": "5–7 วัน",
+        "meta2Label": "สูตรพร้อมใช้",
+        "meta2Value": "50+"
+      },
+      "step3": {
+        "badge": "การทดสอบ",
+        "title": "ทดสอบกับ สัตว์เลี้ยงจริง",
+        "subtitle": "รับ Sample Kit ไปทดสอบกับสัตว์เลี้ยงของคุณหรือลูกค้าก่อนตัดสินใจผลิตเต็มลอต ทุกสูตรผ่านการทดสอบทางห้องแล็บแล้ว ทั้ง Challenge Test (ม.เกษตรฯ) และ Clinical Test (คลินิกสัตวแพทย์พาร์ทเนอร์)",
+        "item1": "Sample Kit ฟรี — ไม่มีข้อผูกมัด",
+        "item2": "ทดสอบ MRSP, Pseudomonas, E.coli, Malassezia แล้ว",
+        "item3": "ปรับแต่งกลิ่น สี สัมผัส หลังทดสอบได้",
+        "meta1Label": "ระยะเวลา",
+        "meta1Value": "5–7 วัน",
+        "meta2Label": "Sample",
+        "meta2Value": "ฟรี"
+      },
+      "step4": {
+        "badge": "การออกแบบและเอกสาร",
+        "title": "ออกแบบและ จัดการเอกสาร",
+        "subtitle": "มีไฟล์ Artwork อยู่แล้ว? ส่งมาพิมพ์ได้เลย หรือถ้ายังไม่มี — เรามีทีมออกแบบช่วยสร้างอัตลักษณ์แบรนด์ในราคาเป็นมิตร SME พร้อมดูแลเรื่องเอกสารให้ครบถ้วน",
+        "item1": "Logo, Packaging, Label — บริการเสริมราคา SME-friendly",
+        "item2": "ไม่ต้องขึ้นทะเบียน — ผลิตเสร็จ พร้อมขายทันที",
+        "item3": "ขนาดบรรจุภัณฑ์ปรับได้หลายขนาด ตามกลยุทธ์แบรนด์",
+        "meta1Label": "ระยะเวลา",
+        "meta1Value": "7–10 วัน",
+        "meta2Label": "ทำคู่ขนาน",
+        "meta2Value": "กับขั้น 5"
+      },
+      "step5": {
+        "badge": "การผลิต",
+        "title": "ผลิตจริงที่ โรงงานเชียงราย",
+        "subtitle": "เริ่มผลิตที่ MOQ 100 ชิ้น — เราสนับสนุน SME ให้เริ่มต้นได้ไม่ยาก มีระบบ QA/QC ควบคุมคุณภาพทุกขั้นตอน ใบอนุญาตผลิตจากสำนักงานสาธารณสุขจังหวัดครบถ้วน",
+        "item1": "MOQ 100 ชิ้น — สั่งยิ่งเยอะ ยิ่งถูก (500/1,000/2,000+ ลดราคาต่อหน่วย)",
+        "item2": "ยิง Lot ฟรี · ซีลพลาสติกฟรี ทุกยอดสั่งผลิต",
+        "item3": "มัดจำ 50% เริ่มผลิต · ส่วนที่เหลือก่อนจัดส่ง",
+        "meta1Label": "ระยะเวลา",
+        "meta1Value": "15–20 วันทำการ",
+        "meta2Label": "MOQ",
+        "meta2Value": "100 ชิ้น"
+      },
+      "step6": {
+        "badge": "การส่งมอบ",
+        "title": "จัดส่ง พร้อมวางขาย",
+        "subtitle": "ส่งสินค้าทั่วประเทศผ่านบริษัทขนส่งเอกชน พร้อมวางจำหน่ายได้ทันที — ไม่ต้องรอเอกสาร ไม่ต้องขึ้นทะเบียน เริ่มทำตลาดได้เลย",
+        "item1": "กรุงเทพ+ปริมณฑล: 1–2 วัน",
+        "item2": "ต่างจังหวัด: 2–4 วัน",
+        "item3": "ราคายังไม่รวม VAT 7% และค่าขนส่ง",
+        "meta1Label": "ระยะเวลารวม",
+        "meta1Value": "30–45 วัน",
+        "meta2Label": "เทียบตลาด",
+        "meta2Value": "OEM ทั่วไป 60–90 วัน"
+      }
+    }
   },
   "innovationPage": {
     "heroBadge": "NATURE x SCIENCE",
-    "heroTitle": "นวัตกรรมสารสกัด\nจากธรรมชาติสู่ผลลัพธ์จริง",
-    "heroSubtitle": "เรานำงานวิจัยนาโนเทคโนโลยีจากห้องแล็บระดับมหาวิทยาลัย มาผสานกับความมหัศจรรย์ของสมุนไพรเชียงราย เพื่อสร้างสรรค์สิ่งที่ดีที่สุดสำหรับสัตว์เลี้ยง",
+    "heroTitle": "วิทยาศาสตร์ที่อยู่\nเบื้องหลัง ทุกสูตร",
+    "heroSubtitle": "Naive Innova ไม่ได้แค่ผสมสูตร — เราออกแบบนวัตกรรมที่มีงานวิจัยรองรับ ด้วย 3 เทคโนโลยีหลัก และ Active Ingredient Library กว่า 100+ ชนิด ที่พร้อมให้เลือกสรรสำหรับแบรนด์ของคุณ",
+    "heroBtnExtracts": "ดูสารสกัดทั้งหมด",
+    "heroBtnConsult": "ขอปรึกษา R&D ฟรี",
     "coreTitle": "3 เทคโนโลยีแกนหลัก",
     "coreSubtitle": "นวัตกรรมลิขสิทธิ์เฉพาะที่ยกระดับมาตรฐานการดูแลสัตว์เลี้ยง",
     "nanoTitle": "Nano-Encapsulation",
@@ -421,5 +508,292 @@
     "proofSubtitle": "มั่นใจด้วยผลทดสอบจากสถาบันชั้นนำและงานวิจัยที่ตีพิมพ์ระดับสากล",
     "ctaTitle": "พร้อมสร้างนวัตกรรมร่วมกับเราหรือยัง?",
     "ctaBtn": "คุยกับทีมนักวิทยาศาสตร์"
+  },
+  "proofSection": {
+    "stat1Label": "สูตรที่ผ่าน",
+    "stat1Sub": "การทดสอบจริง",
+    "stat2Label": "Active Ingredients",
+    "stat2Sub": "ในคลัง",
+    "stat3Label": "ห้องแล็บพาร์ทเนอร์",
+    "stat3Sub": "อิสระ",
+    "stat4Label": "ความเข้มข้น MIC",
+    "stat4Sub": "ยับยั้ง MRSP",
+    "stat5Label": "ชม.",
+    "stat5Sub": "ระยะเวลาออกฤทธิ์ EcoGuard Plus",
+    "claimPrefix": "ทุก Claim",
+    "claimGradient": "มีหลักฐานรองรับ",
+    "claimSubtitle": "ไม่ใช่การตลาด — แต่เป็นวิทยาศาสตร์ที่พิสูจน์ได้จริง ผ่านการทดสอบโดยห้องปฏิบัติการอิสระและคลินิกสัตวแพทย์พาร์ทเนอร์",
+    "tableHeaderLab": "ห้องแล็บ / LAB",
+    "tableHeaderMethod": "วิธีทดสอบ",
+    "tableHeaderTarget": "เชื้อที่ทดสอบ",
+    "tableHeaderResult": "ผลลัพธ์",
+    "labKu": "ม.เกษตรศาสตร์",
+    "labPartner": "คลินิกสัตวแพทย์พาร์ทเนอร์",
+    "labInhouse": "In-house QA/QC",
+    "methodP1": "Clinical Test 14 วัน",
+    "methodP2": "Clinical Test 21 วัน",
+    "methodP3": "Eye Irritation Test",
+    "resultK1": "MIC ≤ 0.0977%",
+    "resultK2": "ยับยั้งที่ 1.5625%",
+    "resultP1": "อาการดีขึ้นอย่างมีนัยสำคัญ",
+    "resultP2": "ลดรอยโรคเฉลี่ย 78%",
+    "resultP3": "ไม่พบการระคายเคือง",
+    "resultI1": "คงสภาพ 24 เดือน ที่ 30°C",
+    "partnerKu": "ม.เกษตรศาสตร์",
+    "partnerVet": "สัตวแพทย์พาร์ทเนอร์",
+    "partnerNanotec": "NANOTEC (สวทช.)",
+    "partnerInhouse": "In-house QA/QC Lab"
+  },
+  "articlesSection": {
+    "categoryLabel": "หมวดหมู่:",
+    "allArticles": "บทความทั้งหมด",
+    "articlesCount": "บทความ",
+    "readingTime": "นาที",
+    "latestArticles": "บทความล่าสุด",
+    "categories": "หมวดหมู่"
+  },
+  "newsHero": {
+    "title": "กิจกรรม & ข่าวสาร",
+    "subtitle": "ติดตามความเคลื่อนไหว งานวิจัย และเบื้องหลัง จาก Naive Innova — ที่เดียวที่ Science meets Story",
+    "tag1": "นวัตกรรม",
+    "tag2": "แบรนด์",
+    "tag3": "กิจกรรม",
+    "tag4": "วิทยาศาสตร์",
+    "tag5": "Factory Tour"
+  },
+  "videoHero": {
+    "badge": "นาอีฟ อินโนว่า · คลังวิดีโอ",
+    "titlePrefix": "เจาะลึกนวัตกรรม",
+    "titleSuffix": "ผ่านเลนส์วิดีโอ",
+    "subtitle": "ร่วมสำรวจระบบนิเวศเทคโนโลยีเชิงลึกผ่านมุมมองกล้อง ตั้งแต่ความสำเร็จของทีมวิจัย R&D ไปจนถึงเคล็ดลับการสร้างแบรนด์แบบมืออาชีพ — สัมผัสความแปลกใหม่ในการดูแลสัตว์เลี้ยง",
+    "recentUploads": "อัปโหลดล่าสุด"
+  },
+  "videoSection": {
+    "recommendedTitle": "วิดีโอแนะนำ",
+    "recommendedSub": "เรื่องราวและนวัตกรรมเบื้องหลัง Naive Innova",
+    "viewAllYoutube": "ดูทั้งหมดใน YouTube",
+    "shortsTitle": "วิดีโอ Shorts",
+    "shortsCount": "{{count}} คลิป",
+    "watchShorts": "ดูใน Shorts",
+    "showLess": "แสดงน้อยลง",
+    "seeMore": "ดูเพิ่มเติม ({{count}} คลิป)"
+  },
+  "newsDetail": {
+    "readingTime": "{{count}} นาทีในการอ่าน",
+    "wordCount": "{{count}} คำ",
+    "by": "เรียบเรียงโดย",
+    "authorSubtitle": "นักการตลาดสร้างสรรค์ ที่ขับเครื่ององค์กรด้วย AI Agents Innovation",
+    "authorTitle": "Digital Marketing Consultant · นาอีฟ อินโนว่า",
+    "followFacebook": "ติดตามบน Facebook"
+  },
+  "partnerSection": {
+    "eyebrow": "CERTIFIED & TRUSTED BY",
+    "title": "การันตีด้วยมาตรฐานสากล และเครือข่ายสถาบันชั้นนำ",
+    "subtitle": "ผลิตภัณฑ์ของเราผ่านการทดสอบ วิจัยร่วม และได้รับการรับรองจากองค์กรระดับประเทศและนานาชาติ"
+  },
+  "innovationDetails": {
+    "coreTechs": {
+      "differentTitle": "3 เทคโนโลยีที่ทำให้สูตร",
+      "differentSub": "แตกต่างอย่างแท้จริง",
+      "philosophyQuote": "\"ผลิตภัณฑ์สัตว์เลี้ยงที่ดี ต้องปลอดภัยก่อน แล้วจึงค่อยมีประสิทธิภาพ\"",
+      "tech1": {
+        "banger": "Core · ใช้ในทุกสูตร",
+        "title": "EcoGuard Plus™",
+        "content": "สารต้านจุลชีพจากธรรมชาติในรูปแบบนาโน (Ethyl Lauroyl Arginate HCl) ยับยั้งแบคทีเรีย เชื้อรา และยีสต์แบบ Broad-spectrum ไม่ก่อการดื้อยา ย่อยสลายได้ทางชีวภาพ"
+      },
+      "tech2": {
+        "banger": "Delivery System",
+        "title": "Nano Encapsulation Technology",
+        "content": "ระบบห่อหุ้มสารสำคัญระดับนาโน ขนาดเฉลี่ย 84 นาโนเมตร เพิ่มการซึมผ่านผิว ควบคุมการปลดปล่อยสาร (Controlled Release) และยืดอายุการออกฤทธิ์ให้ยาวนาน"
+      },
+      "tech3": {
+        "banger": "Natural · Thai Herbs",
+        "title": "Herbal Active Complex",
+        "content": "ผสานสารสกัดสมุนไพรไทยพรีเมียมจากภาคเหนือ ไม่ว่าจะเป็น คาโมมาย ขมิ้นชัน พลูคาว มังคุด บัวบก และอื่นๆ ผ่านกระบวนการ Nano-Encapsulation เพื่อประสิทธิภาพสูงสุด"
+      }
+    },
+    "ecoguard": {
+      "title": "EcoGuard Plus™",
+      "subtitle": "สารต้านจุลชีพจากธรรมชาติ",
+      "workingHeader": "ทำงานอย่างไร?",
+      "specs": {
+        "diameterSub": "ขนาดอนุภาคนาโน ± 0.75 nm",
+        "pdiLabel": "PDI (ความสม่ำเสมอ)",
+        "pdiSub": "± 0.007 | กระจายตัวสม่ำเสมอ",
+        "zetaSub": "± 6.8 | ความเสถียรสูง",
+        "shelfLifeUnit": "เดือน",
+        "shelfLifeSub": "15–25°C ในภาชนะปิดสนิท",
+        "recommendedUseSub": "ใช้ได้กับสูตรน้ำทุกประเภท"
+      },
+      "howItWorks": {
+        "step1Title": "Bio-adhesive เกาะผิว",
+        "step1Desc": "อนุภาคนาโน ELA เกาะติดผิวหนังสัตว์เลี้ยงอย่างมีประสิทธิภาพ ออกฤทธิ์ได้ยาวนานกว่า 24 ชั่วโมง",
+        "step2Title": "ทำลายเยื่อหุ้มเซลล์แบคทีเรีย",
+        "step2Desc": "กลไก Physical disruption ไม่ใช้ยาปฏิชีวนะ จึงไม่ก่อการดื้อยา (Non-inducible resistance)",
+        "step3Title": "ย่อยสลายได้ทางชีวภาพ",
+        "step3Desc": "ไม่สะสมในสิ่งแวดล้อม ไม่เป็นพิษต่อสัตว์น้ำ — แนวทาง Green Chemistry"
+      },
+      "coverage": {
+        "mrspSub": "แบคทีเรียดื้อยาในสัตว์เลี้ยง",
+        "gramNegSub": "แบคทีเรีย Gram-negative",
+        "yeastSub": "ยีสต์สาเหตุอาการคัน",
+        "fungiSub": "เชื้อราวงกว้างสเปกตรัม"
+      }
+    },
+    "nanotech": {
+      "title": "Nano Encapsulation",
+      "subtitle": "ส่งสารออกฤทธิ์ถึงระดับเซลล์",
+      "desc": "การห่อหุ้มสารสำคัญในระดับนาโน (84 nm) ทำให้สารซึมผ่านผิวได้ดีขึ้น ออกฤทธิ์แม่นยำกว่า และมีความคงตัวสูงกว่าการใช้สารอิสระทั่วไป",
+      "sneddsTitle": "SNEDDS Nano System",
+      "sneddsText": "(Self-Nano Emulsifying Drug Delivery System) — ใช้ในสูตรแชมพูออยล์และผลิตภัณฑ์ Oil-based เพื่อนำน้ำมันธรรมชาติเข้าสู่เส้นขน ซึมไว ไม่เหนียวเหนอะหนะ",
+      "benefitsHeader": "4 ประโยชน์หลัก",
+      "specs": {
+        "sizeLabel": "ขนาดอนุภาค",
+        "sizeSub": "เล็กกว่าเซลล์ผิวหนัง ~100 เท่า",
+        "absorbLabel": "การซึมผ่าน",
+        "absorbSub": "เทียบกับสารอิสระที่ไม่ห่อหุ้ม",
+        "stabilityLabel": "ความคงตัว",
+        "stabilityUnit": "เดือน",
+        "stabilitySub": "ที่อุณหภูมิห้อง 15–30°C",
+        "concentrationSub": "อนุภาค/mL สม่ำเสมอสูง"
+      },
+      "benefits": {
+        "b1Title": "เพิ่มการซึมผ่านผิวหนัง",
+        "b1Desc": "ขนาดนาโนช่วยให้สารผ่านชั้น Stratum Corneum ได้ง่าย ส่งฤทธิ์ถึงชั้น Dermis",
+        "b2Title": "Controlled Release",
+        "b2Desc": "ปลดปล่อยสารช้าๆ อย่างสม่ำเสมอ ทำให้ออกฤทธิ์ต่อเนื่องยาวนานกว่า",
+        "b3Title": "เพิ่มความคงตัวของสูตร",
+        "b3Desc": "ปกป้องสารสำคัญจากแสง ความร้อน และการเกิด Oxidation ยืดอายุผลิตภัณฑ์",
+        "b4Title": "ลด Irritation",
+        "b4Desc": "ห่อหุ้มสารที่อาจระคายเคืองให้อ่อนโยนขึ้น เหมาะกับสัตว์ผิวบอบบาง"
+      }
+    },
+    "herbalComplex": {
+      "title": "Herbal Active Complex",
+      "subtitle": "สมุนไพรธรรมชาติพรีเมียม",
+      "desc": "เราคัดเลือกสมุนไพรสารสกัดเข้มข้นจากแหล่งปลูกออร์แกนิคที่ได้มาตรฐาน นำมาผ่านกระบวนการ Nano-Encapsulation เพื่อเพิ่มประสิทธิภาพการดูดซึมและออกฤทธิ์สูงสุดในทุกสูตรผลิตภัณฑ์",
+      "herbs": {
+        "chamomileName": "คาโมมาย",
+        "chamomileDesc": "บรรเทาอาการคันและลดการอักเสบของผิวหนัง ปลอบประโลมผิวแพ้ง่าย",
+        "turmericName": "ขมิ้นชัน",
+        "turmericDesc": "ลดการอักเสบจากเชื้อรา บรรเทาอาการคันเรื้อรัง มีฤทธิ์ต้านอนุมูลอิสระ",
+        "centellaName": "บัวบก",
+        "centellaDesc": "กระตุ้นการสร้างคอลลาเจนและซ่อมแซมผิว ปลอบประโลม ลดรอยแดง",
+        "mangosteenName": "มังคุด",
+        "mangosteenDesc": "Xanthone สูง ต้านอนุมูลอิสระ ช่วยลดการอักเสบและบำรุงผิวหนัง",
+        "teaTreeName": "ที ทรี ออยล์",
+        "teaTreeDesc": "ฤทธิ์ Antifungal จากธรรมชาติ เสริมฤทธิ์ EcoGuard Plus ในสูตรสเปรย์เชื้อรา",
+        "lavenderName": "ลาเวนเดอร์",
+        "lavenderDesc": "กลิ่นหอมผ่อนคลาย มีคุณสมบัติต้านแบคทีเรียอ่อนๆ",
+        "coffeeCherryName": "คอฟฟี่ เชอร์รี่",
+        "coffeeCherryDesc": "สารต้านอนุมูลอิสระสูงจากผลกาแฟ ช่วยบำรุงผิวและลดริ้วรอย",
+        "houttuyniaName": "พลูคาว",
+        "houttuyniaDesc": "ต้านการติดเชื้อแบคทีเรียและไวรัส ลดการอักเสบ เร่งการสมานแผลของผิวหนัง"
+      }
+    },
+    "ingredientLibrary": {
+      "title": "คลังสารสกัดกว่า",
+      "titleSpan": "100+ ชนิด",
+      "desc": "เลือกผสมได้ตามโจทย์แบรนด์ของคุณ — ทีม R&D จะช่วยออกแบบสูตรเฉพาะที่คู่แข่งเลียนแบบไม่ได้",
+      "customHeader": "ต้องการสูตรเฉพาะ?",
+      "customDesc": "ทีม R&D ของเราพร้อมพัฒนาสูตรใหม่จากศูนย์ร่วมกับคุณ ตั้งแต่โจทย์ปัญหาลูกค้า สู่สูตรที่ validate แล้วในห้องปฏิบัติการมาตรฐาน",
+      "customFormulaBtn": "ดู Custom Formula",
+      "consultBtn": "ปรึกษา R&D ฟรี 1-on-1",
+      "checks": {
+        "check1": "เลือกสารสกัดได้จากคลัง 100+ ชนิด",
+        "check2": "ปรับสูตรภายใน 5–7 วัน",
+        "check3": "ได้สูตรที่คู่แข่งเลียนแบบไม่ได้",
+        "check4": "MOQ เริ่มต้น 100 ชิ้น"
+      },
+      "categories": {
+        "cat1Title": "สมุนไพรและพืชสกัด",
+        "cat1Item8Name": "+ อีก 30+ ชนิด",
+        "cat1Item8Desc": "แหล่งสมุนไพรไทยและสากล",
+        "cat2Title": "น้ำมันและ Active Ingredients",
+        "cat2Item8Name": "+ อีก 40+ ชนิด",
+        "cat2Item8Desc": "Oil-based และ Water-based",
+        "cat3Title": "ระบบต้านเชื้อและปกป้อง",
+        "cat3Item8Name": "+ อีก 20+ ระบบ",
+        "cat3Item8Desc": "สำหรับ Custom Formula",
+        "items": {
+          "chamomileDesc": "บรรเทาคัน ลดอักเสบ",
+          "centellaDesc": "ซ่อมแซมผิว สร้างคอลลาเจน",
+          "turmericDesc": "ต้านเชื้อรา ลดอักเสบ",
+          "mangosteenDesc": "Xanthone สูง ต้าน Free Radical",
+          "coffeeCherryDesc": "Antioxidant บำรุงผิว",
+          "houttuyniaDesc": "ต้านแบคทีเรีย ไวรัส",
+          "chamomileDistillateDesc": "ปลอบประโลม ลดระคายเคือง",
+          "lavenderDesc": "กลิ่นหอม ต้านแบคทีเรีย",
+          "teaTreeDesc": "Antifungal จากธรรมชาติ",
+          "jojobaDesc": "ใกล้เคียง Sebum ปรับสมดุลผิว",
+          "rosehipDesc": "Vitamin C สูง ฟื้นฟูผิว",
+          "milkDesc": "บำรุงผิว ให้ความชุ่มชื้น",
+          "hyaluronicDesc": "Moist-Healing 72h system",
+          "silkProteinDesc": "เคลือบขน ลดการแตกหัก",
+          "ecoguardDesc": "Core — ทุกสูตร Broad-spectrum",
+          "nanoShellDesc": "ห่อหุ้มสารสำคัญ 84 nm",
+          "sneddsDesc": "นำน้ำมันเข้าสูตรน้ำ",
+          "waterRepellentDesc": "เคลือบกันน้ำสำหรับ Powder",
+          "bioAdhesiveDesc": "ยึดเกาะผิวยาวนาน >24h",
+          "naturalCleansingDesc": "ปลอดภัย ไม่มี SLS/SLES",
+          "foodGradeCarrierDesc": "Biodegradable ย่อยสลายได้"
+        }
+      }
+    },
+    "cta": {
+      "eyebrow": "ติดต่อเรา",
+      "title": "พร้อมพัฒนาสูตร",
+      "titleSpan": "เฉพาะของคุณ?",
+      "desc": "ทีม R&D พร้อมรับโจทย์ทุกระดับ — ตั้งแต่สูตรเริ่มต้น ไปจนถึง Custom Formula ที่คู่แข่งเลียนแบบไม่ได้"
+    }
+  },
+  "contentPage": {
+    "heroBadge": "ศูนย์การติดต่อสื่อสาร",
+    "heroTitle": "คอนเทนต์และการติดต่อ",
+    "heroSubtitle": "\"ศูนย์กลางการเชื่อมต่อข้อมูล ช่องทางการติดต่อสื่อสาร และแผนที่ที่ตั้งโรงงานของ นาอีฟ อินโนว่า ทั้งหมดรวมอยู่ในที่เดียว\"",
+    "getInTouch": "ติดต่อเรา",
+    "titlePrefix": "ส่งข้อความถึง",
+    "titleSpan": "ทีมงาน",
+    "subtitle": "มีข้อสงสัยหรือต้องการสอบถามเกี่ยวกับการสร้างแบรนด์? ฝากข้อความไว้ได้เลย",
+    "labelName": "ชื่อ - นามสกุล",
+    "labelEmail": "อีเมล",
+    "labelSubject": "หัวข้อที่ต้องการติดต่อ",
+    "selectSubject": "เลือกหัวข้อ...",
+    "optOem": "ปรึกษาการทำแบรนด์ (OEM)",
+    "optRd": "พัฒนาสูตรเฉพาะ (R&D)",
+    "optFactory": "เยี่ยมชมโรงงาน",
+    "optOther": "อื่นๆ",
+    "labelDetail": "รายละเอียด",
+    "placeholderDetail": "เขียนข้อความหรือรายละเอียดที่คุณต้องการสอบถาม...",
+    "btnSend": "ส่งข้อความ",
+    "confidentialNote": "ข้อมูลของคุณจะถูกเก็บเป็นความลับและไม่ถูกนำไปเผยแพร่",
+    "lineResponse": "ตอบเร็วที่สุด · ตลอดเวลาทำการ",
+    "labelPhone": "โทรศัพท์",
+    "workingHours": "จ.–ศ. 09:00–17:30",
+    "emailResponse": "ตอบภายใน 24 ชม. ทุกวันทำการ",
+    "mapTitle": "แผนที่โรงงาน · Naive Innova เชียงราย",
+    "btnOpenMap": "เปิดใน Google Maps",
+    "btnCopyAddress": "คัดลอกที่อยู่",
+    "labelAddress": "ที่อยู่",
+    "addressText": "144/1 หมู่ 1 ต.สายเหนือ อ.พาน จ.เชียงราย 57120",
+    "labelWorkingTime": "เวลาทำการ",
+    "daysWeekday": "จันทร์ – ศุกร์",
+    "hoursWeekday": "09:00 – 17:30 น.",
+    "daysSaturday": "เสาร์",
+    "hoursSaturday": "09:00 – 12:00 น. (นัดล่วงหน้า)",
+    "daysSunday": "อาทิตย์",
+    "hoursSunday": "ปิดทำการ",
+    "labelTravel": "เดินทางจาก",
+    "travelCity": "เชียงราย เมือง",
+    "travelAirport": "สนามบินเชียงราย",
+    "travelBus": "ขนส่ง พาน",
+    "travelTime45": "45 นาที",
+    "travelTime35": "35 นาที",
+    "travelTime10": "10 นาที"
+  },
+  "qaHero": {
+    "badge": "ศูนย์สนับสนุนลูกค้า",
+    "title": "Q&A",
+    "subtitle": "\"เราพร้อมช่วยเหลือคุณในทุกขั้นตอนของการเดินทางสร้างแบรนด์ผลิตภัณฑ์ดูแลสัตว์เลี้ยงของคุณ ค้นพบคำตอบสำหรับคำถามยอดนิยมได้จากด้านล่างนี้\""
   }
 }

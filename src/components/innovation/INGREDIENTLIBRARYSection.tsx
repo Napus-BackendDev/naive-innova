@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Container, Typography, Button } from '@mui/material';
 import { motion } from 'framer-motion';
 import { Leaf, Droplets, ShieldCheck, Pencil, Check, ArrowRight } from 'lucide-react';
@@ -9,16 +10,16 @@ const categories = [
     bgColor: 'bg-emerald-50',
     borderColor: 'border-emerald-100',
     dotColor: 'bg-emerald-400',
-    title: 'สมุนไพรและพืชสกัด',
+    titleKey: 'innovationDetails.ingredientLibrary.categories.cat1Title',
     items: [
-      { name: 'Chamomilla Extract', desc: 'บรรเทาคัน ลดอักเสบ' },
-      { name: 'Centella Asiatica', desc: 'ซ่อมแซมผิว สร้างคอลลาเจน' },
-      { name: 'Turmeric Extract', desc: 'ต้านเชื้อรา ลดอักเสบ' },
-      { name: 'Mangosteen Extract', desc: 'Xanthone สูง ต้าน Free Radical' },
-      { name: 'Coffee Cherry', desc: 'Antioxidant บำรุงผิว' },
-      { name: 'Houttuynia Cordata', desc: 'ต้านแบคทีเรีย ไวรัส' },
-      { name: 'Chamomile Distillate', desc: 'ปลอบประโลม ลดระคายเคือง' },
-      { name: '+ อีก 30+ ชนิด', desc: 'แหล่งสมุนไพรไทยและสากล', extra: true },
+      { name: 'Chamomilla Extract', descKey: 'innovationDetails.ingredientLibrary.categories.items.chamomileDesc' },
+      { name: 'Centella Asiatica', descKey: 'innovationDetails.ingredientLibrary.categories.items.centellaDesc' },
+      { name: 'Turmeric Extract', descKey: 'innovationDetails.ingredientLibrary.categories.items.turmericDesc' },
+      { name: 'Mangosteen Extract', descKey: 'innovationDetails.ingredientLibrary.categories.items.mangosteenDesc' },
+      { name: 'Coffee Cherry', descKey: 'innovationDetails.ingredientLibrary.categories.items.coffeeCherryDesc' },
+      { name: 'Houttuynia Cordata', descKey: 'innovationDetails.ingredientLibrary.categories.items.houttuyniaDesc' },
+      { name: 'Chamomile Distillate', descKey: 'innovationDetails.ingredientLibrary.categories.items.chamomileDistillateDesc' },
+      { nameKey: 'innovationDetails.ingredientLibrary.categories.cat1Item8Name', descKey: 'innovationDetails.ingredientLibrary.categories.cat1Item8Desc', extra: true },
     ],
   },
   {
@@ -27,16 +28,16 @@ const categories = [
     bgColor: 'bg-cyan-50',
     borderColor: 'border-cyan-100',
     dotColor: 'bg-cyan-400',
-    title: 'น้ำมันและ Active Ingredients',
+    titleKey: 'innovationDetails.ingredientLibrary.categories.cat2Title',
     items: [
-      { name: 'Lavender Oil', desc: 'กลิ่นหอม ต้านแบคทีเรีย' },
-      { name: 'Tea Tree Oil (Nano)', desc: 'Antifungal จากธรรมชาติ' },
-      { name: 'Jojoba Oil', desc: 'ใกล้เคียง Sebum ปรับสมดุลผิว' },
-      { name: 'Rosehip Oil', desc: 'Vitamin C สูง ฟื้นฟูผิว' },
-      { name: 'Milk Oil', desc: 'บำรุงผิว ให้ความชุ่มชื้น' },
-      { name: 'Hyaluronic Acid (Nano)', desc: 'Moist-Healing 72h system' },
-      { name: 'Nano Silk Protein', desc: 'เคลือบขน ลดการแตกหัก' },
-      { name: '+ อีก 40+ ชนิด', desc: 'Oil-based และ Water-based', extra: true },
+      { name: 'Lavender Oil', descKey: 'innovationDetails.ingredientLibrary.categories.items.lavenderDesc' },
+      { name: 'Tea Tree Oil (Nano)', descKey: 'innovationDetails.ingredientLibrary.categories.items.teaTreeDesc' },
+      { name: 'Jojoba Oil', descKey: 'innovationDetails.ingredientLibrary.categories.items.jojobaDesc' },
+      { name: 'Rosehip Oil', descKey: 'innovationDetails.ingredientLibrary.categories.items.rosehipDesc' },
+      { name: 'Milk Oil', descKey: 'innovationDetails.ingredientLibrary.categories.items.milkDesc' },
+      { name: 'Hyaluronic Acid (Nano)', descKey: 'innovationDetails.ingredientLibrary.categories.items.hyaluronicDesc' },
+      { name: 'Nano Silk Protein', descKey: 'innovationDetails.ingredientLibrary.categories.items.silkProteinDesc' },
+      { nameKey: 'innovationDetails.ingredientLibrary.categories.cat2Item8Name', descKey: 'innovationDetails.ingredientLibrary.categories.cat2Item8Desc', extra: true },
     ],
   },
   {
@@ -45,28 +46,30 @@ const categories = [
     bgColor: 'bg-blue-50',
     borderColor: 'border-blue-100',
     dotColor: 'bg-blue-400',
-    title: 'ระบบต้านเชื้อและปกป้อง',
+    titleKey: 'innovationDetails.ingredientLibrary.categories.cat3Title',
     items: [
-      { name: 'EcoGuard Plus™', desc: 'Core — ทุกสูตร Broad-spectrum' },
-      { name: 'Nano Encapsulation Shell', desc: 'ห่อหุ้มสารสำคัญ 84 nm' },
-      { name: 'SNEDDS System', desc: 'นำน้ำมันเข้าสูตรน้ำ' },
-      { name: 'Water-Repellent Nano Coat', desc: 'เคลือบกันน้ำสำหรับ Powder' },
-      { name: 'Bio-adhesive Agent', desc: 'ยึดเกาะผิวยาวนาน >24h' },
-      { name: 'Natural Cleansing Base', desc: 'ปลอดภัย ไม่มี SLS/SLES' },
-      { name: 'Food-Grade Carrier', desc: 'Biodegradable ย่อยสลายได้' },
-      { name: '+ อีก 20+ ระบบ', desc: 'สำหรับ Custom Formula', extra: true },
+      { name: 'EcoGuard Plus™', descKey: 'innovationDetails.ingredientLibrary.categories.items.ecoguardDesc' },
+      { name: 'Nano Encapsulation Shell', descKey: 'innovationDetails.ingredientLibrary.categories.items.nanoShellDesc' },
+      { name: 'SNEDDS System', descKey: 'innovationDetails.ingredientLibrary.categories.items.sneddsDesc' },
+      { name: 'Water-Repellent Nano Coat', descKey: 'innovationDetails.ingredientLibrary.categories.items.waterRepellentDesc' },
+      { name: 'Bio-adhesive Agent', descKey: 'innovationDetails.ingredientLibrary.categories.items.bioAdhesiveDesc' },
+      { name: 'Natural Cleansing Base', descKey: 'innovationDetails.ingredientLibrary.categories.items.naturalCleansingDesc' },
+      { name: 'Food-Grade Carrier', descKey: 'innovationDetails.ingredientLibrary.categories.items.foodGradeCarrierDesc' },
+      { nameKey: 'innovationDetails.ingredientLibrary.categories.cat3Item8Name', descKey: 'innovationDetails.ingredientLibrary.categories.cat3Item8Desc', extra: true },
     ],
   },
 ];
 
 const ctaChecks = [
-  'เลือกสารสกัดได้จากคลัง 100+ ชนิด',
-  'ปรับสูตรภายใน 5–7 วัน',
-  'ได้สูตรที่คู่แข่งเลียนแบบไม่ได้',
-  'MOQ เริ่มต้น 100 ชิ้น',
+  'innovationDetails.ingredientLibrary.checks.check1',
+  'innovationDetails.ingredientLibrary.checks.check2',
+  'innovationDetails.ingredientLibrary.checks.check3',
+  'innovationDetails.ingredientLibrary.checks.check4',
 ];
 
 export default function INGREDIENTLIBRARYSection() {
+  const { t } = useTranslation();
+
   return (
     <section className="py-24 bg-slate-50 relative overflow-hidden">
       <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-cyan-50/40 rounded-full blur-[120px] translate-x-1/3 -translate-y-1/2 pointer-events-none" />
@@ -85,13 +88,13 @@ export default function INGREDIENTLIBRARYSection() {
             <span className="text-xs font-black uppercase tracking-[0.2em] text-slate-500">Ingredient Library</span>
           </div>
           <Typography variant="h2" className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 mb-4 tracking-tight leading-tight">
-            คลังสารสกัดกว่า{' '}
+            {t('innovationDetails.ingredientLibrary.title')}{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-fuchsia-500">
-              100+ ชนิด
+              {t('innovationDetails.ingredientLibrary.titleSpan')}
             </span>
           </Typography>
           <p className="text-slate-400 text-sm font-medium max-w-2xl leading-relaxed">
-            เลือกผสมได้ตามโจทย์แบรนด์ของคุณ — ทีม R&amp;D จะช่วยออกแบบสูตรเฉพาะที่คู่แข่งเลียนแบบไม่ได้
+            {t('innovationDetails.ingredientLibrary.desc')}
           </p>
         </motion.div>
 
@@ -111,7 +114,7 @@ export default function INGREDIENTLIBRARYSection() {
                 {/* Card header */}
                 <div className={`flex items-center gap-3 px-6 py-4 border-b-2 border-slate-100 ${cat.bgColor}`}>
                   <cat.icon size={18} className={cat.color} strokeWidth={2} />
-                  <span className={`text-sm font-black ${cat.color}`}>{cat.title}</span>
+                  <span className={`text-sm font-black ${cat.color}`}>{t(cat.titleKey)}</span>
                 </div>
 
                 {/* Items list */}
@@ -124,10 +127,10 @@ export default function INGREDIENTLIBRARYSection() {
                       <div className={`w-1.5 h-1.5 rounded-full ${cat.dotColor} shrink-0 mt-2`} />
                       <div className="flex flex-1 gap-3 min-w-0">
                         <span className={`text-sm font-black text-slate-800 shrink-0 ${item.extra ? 'italic' : ''}`}>
-                          {item.name}
+                          {item.nameKey ? t(item.nameKey) : item.name}
                         </span>
                         <span className="text-xs text-slate-400 font-medium truncate self-center">
-                          {item.desc}
+                          {t(item.descKey)}
                         </span>
                       </div>
                     </div>
@@ -152,20 +155,21 @@ export default function INGREDIENTLIBRARYSection() {
                 {/* Header */}
                 <div className="flex items-center gap-2.5 mb-6">
                   <Pencil size={16} className="text-cyan-400" />
-                  <span className="text-xs font-black uppercase tracking-[0.2em] text-cyan-400">ต้องการสูตรเฉพาะ?</span>
+                  <span className="text-xs font-black uppercase tracking-[0.2em] text-cyan-400">
+                    {t('innovationDetails.ingredientLibrary.customHeader')}
+                  </span>
                 </div>
 
                 <p className="text-slate-300 text-sm leading-relaxed mb-8 font-medium">
-                  ทีม R&amp;D ของเราพร้อมพัฒนาสูตรใหม่จากศูนย์ร่วมกับคุณ ตั้งแต่โจทย์ปัญหาลูกค้า สู่สูตรที่{' '}
-                  <span className="text-white font-bold">validate</span> แล้วในห้องปฏิบัติการมาตรฐาน
+                  {t('innovationDetails.ingredientLibrary.customDesc')}
                 </p>
 
                 {/* Checklist */}
                 <ul className="space-y-3 mb-10 flex-1">
-                  {ctaChecks.map((item, i) => (
+                  {ctaChecks.map((itemKey, i) => (
                     <li key={i} className="flex items-center gap-3 text-sm text-slate-300">
                       <Check size={14} className="text-cyan-400 shrink-0" />
-                      {item}
+                      {t(itemKey)}
                     </li>
                   ))}
                 </ul>
@@ -178,14 +182,14 @@ export default function INGREDIENTLIBRARYSection() {
                     className="bg-gradient-to-r from-cyan-500 to-fuchsia-500 hover:opacity-90 text-white font-black normal-case py-3 rounded-xl text-sm shadow-lg"
                     endIcon={<ArrowRight size={16} />}
                   >
-                    ดู Custom Formula
+                    {t('innovationDetails.ingredientLibrary.customFormulaBtn')}
                   </Button>
                   <Button
                     variant="outlined"
                     fullWidth
                     className="border border-white/20 text-white hover:bg-white/10 font-bold normal-case py-3 rounded-xl text-sm"
                   >
-                    ปรึกษา R&amp;D ฟรี 1-on-1
+                    {t('innovationDetails.ingredientLibrary.consultBtn')}
                   </Button>
                 </div>
               </div>

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Container, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 
@@ -14,63 +15,65 @@ import houttuyniaImg from '../../assets/herbs/houttuynia.png';
 const herbs = [
   {
     image: chamomileImg,
-    name: 'คาโมมาย',
+    nameKey: 'innovationDetails.herbalComplex.herbs.chamomileName',
     latin: 'Chamomilla Extract',
-    desc: 'บรรเทาอาการคันและลดการอักเสบของผิวหนัง ปลอบประโลมผิวเแพ้ง่าย',
+    descKey: 'innovationDetails.herbalComplex.herbs.chamomileDesc',
     tags: ['Anti-inflammatory', 'Soothing'],
   },
   {
     image: turmericImg,
-    name: 'ขมิ้นชัน',
+    nameKey: 'innovationDetails.herbalComplex.herbs.turmericName',
     latin: 'Turmeric Extract',
-    desc: 'ลดการอักเสบจากเชื้อรา บรรเทาอาการคันเรื้อรัง มีฤทธิ์ต้านอนุมูลอิสระ',
+    descKey: 'innovationDetails.herbalComplex.herbs.turmericDesc',
     tags: ['Antifungal', 'Anti-ox'],
   },
   {
     image: centellaImg,
-    name: 'บัวบก',
+    nameKey: 'innovationDetails.herbalComplex.herbs.centellaName',
     latin: 'Centella Asiatica (ECA233)',
-    desc: 'กระตุ้นการสร้างคอลลาเจนและซ่อมแซมผิว ปลอมประโลม ลดรอยแดง',
+    descKey: 'innovationDetails.herbalComplex.herbs.centellaDesc',
     tags: ['Wound Healing', 'Collagen'],
   },
   {
     image: mangosteenImg,
-    name: 'มังคุด',
+    nameKey: 'innovationDetails.herbalComplex.herbs.mangosteenName',
     latin: 'Mangosteen Extract',
-    desc: 'Xanthone สูง ต้านอนุมูลอิสระ ช่วยลดการอักเสบและบำรุงผิวหนัง',
+    descKey: 'innovationDetails.herbalComplex.herbs.mangosteenDesc',
     tags: ['Xanthone', 'Anti-ox'],
   },
   {
     image: teaTreeImg,
-    name: 'ที กรี ออยล์',
+    nameKey: 'innovationDetails.herbalComplex.herbs.teaTreeName',
     latin: 'Tea Tree Oil (Nano)',
-    desc: 'ฤทธิ์ Antifungal จากธรรมชาติ เสริมฤทธิ์ EcoGuard Plus ในสูตรสเปรย์เชื้อรา',
+    descKey: 'innovationDetails.herbalComplex.herbs.teaTreeDesc',
     tags: ['Antifungal', 'Natural'],
   },
   {
     image: lavenderImg,
-    name: 'ลาเวนเดอร์',
+    nameKey: 'innovationDetails.herbalComplex.herbs.lavenderName',
     latin: 'Lavender Oil',
-    desc: 'กลิ่นหอมผ่อนคลาย มีคุณสมบัติต้านแบคทีเรียอ่อนๆ',
+    descKey: 'innovationDetails.herbalComplex.herbs.lavenderDesc',
     tags: ['Aromatherapy', 'Antibacterial'],
   },
   {
     image: coffeeCherryImg,
-    name: 'คอฟฟี่ เชอร์รี่',
+    nameKey: 'innovationDetails.herbalComplex.herbs.coffeeCherryName',
     latin: 'Coffee Cherry Extract',
-    desc: 'สารต้านอนุมูลอิสระสูงจากผลกาแฟ ช่วยบำรุงผิวและลดริ้วรอย',
+    descKey: 'innovationDetails.herbalComplex.herbs.coffeeCherryDesc',
     tags: ['Antioxidant', 'Skin Care'],
   },
   {
     image: houttuyniaImg,
-    name: 'พลูคาว',
+    nameKey: 'innovationDetails.herbalComplex.herbs.houttuyniaName',
     latin: 'Houttuynia Cordata',
-    desc: 'ต้านการติดเชื้อแบคทีเรียและไวรัส ลดการอักเสบ เร่งจิ้วของผิวหนัง',
+    descKey: 'innovationDetails.herbalComplex.herbs.houttuyniaDesc',
     tags: ['Antibacterial', 'Antiviral'],
   },
 ];
 
 export default function HERBALCOMPLEXSection() {
+  const { t } = useTranslation();
+
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-emerald-50/40 rounded-full blur-[130px] -translate-x-1/3 -translate-y-1/3 pointer-events-none" />
@@ -89,13 +92,13 @@ export default function HERBALCOMPLEXSection() {
             <span className="text-xs font-black uppercase tracking-[0.2em] text-slate-500">Technology 03</span>
           </div>
           <Typography variant="h2" className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 mb-4 tracking-tight leading-tight">
-            Herbal Active Complex{' '}
+            {t('innovationDetails.herbalComplex.title')}{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-500">
-              สมุนไพรธรรมชาติพรีเมียม
+              {t('innovationDetails.herbalComplex.subtitle')}
             </span>
           </Typography>
           <p className="text-slate-400 text-sm font-medium max-w-3xl leading-relaxed mx-auto md:mx-0">
-            เราคัดเลือกสมุนไพรสารสกัดเข้มข้นจากแหล่งปลูกออร์แกนิคที่ได้มาตรฐาน นำมาผ่านกระบวนการ Nano-Encapsulation เพื่อเพิ่มประสิทธิภาพการดูดซึมและออกฤทธิ์สูงสุดในทุกสูตรผลิตภัณฑ์
+            {t('innovationDetails.herbalComplex.desc')}
           </p>
         </motion.div>
 
@@ -116,16 +119,16 @@ export default function HERBALCOMPLEXSection() {
                 <div className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden mb-6 bg-slate-50 flex items-center justify-center">
                   <img 
                     src={herb.image} 
-                    alt={herb.name}
+                    alt={t(herb.nameKey)}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 to-transparent pointer-events-none" />
                 </div>
 
                 {/* Name */}
-                <div className="px-2">
+                <div className="px-2 flex flex-col flex-1">
                   <Typography variant="h6" className="text-base font-black text-slate-900 mb-1 leading-tight group-hover:text-emerald-700 transition-colors">
-                    {herb.name}
+                    {t(herb.nameKey)}
                   </Typography>
                   <div className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-4 h-8 overflow-hidden">
                     {herb.latin}
@@ -133,7 +136,7 @@ export default function HERBALCOMPLEXSection() {
 
                   {/* Description */}
                   <p className="text-xs text-slate-500 leading-relaxed mb-6 flex-1 line-clamp-3">
-                    {herb.desc}
+                    {t(herb.descKey)}
                   </p>
 
                   {/* Tags */}

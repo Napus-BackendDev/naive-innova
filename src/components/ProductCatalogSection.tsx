@@ -20,12 +20,13 @@ export default function ProductCatalogSection() {
       case 2:
         navigate('/skin/skin-repair-gel');
         break;
-      case 3:
+      case 3: {
         const element = document.getElementById('contact-section');
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
         break;
+      }
     }
   };
 
@@ -119,7 +120,7 @@ export default function ProductCatalogSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: itemIndex * 0.1, duration: 0.6 }}
-                    onClick={() => handleItemClick(catIndex, (item as any).id)}
+                    onClick={() => handleItemClick(catIndex, item.id)}
                     className="group relative cursor-pointer rounded-none overflow-hidden hover:z-10 transition-all duration-700 aspect-[4/5] bg-white"
                   >
                     {/* Full Bleed Image */}

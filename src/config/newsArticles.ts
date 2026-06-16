@@ -88,27 +88,40 @@ function toSlug(title: string, date: string): string {
   return `${date}-${safe}`;
 }
 
+interface RawArticle {
+  title?: string;
+  subtitle?: string;
+  category?: string;
+  date?: string;
+  content?: string[];
+  tags?: string[];
+  excerpt?: string;
+  source_url?: string;
+  key_takeaway?: string | string[];
+}
+
 // ── Map JSON → NewsArticle[] ─────────────────────────────
 export const newsArticles: NewsArticle[] = rawData.map((item, idx) => {
-  const body = parseContent(item.content ?? []);
+  const rawItem = item as RawArticle;
+  const body = parseContent(rawItem.content ?? []);
   const wordCount = body.reduce((sum, block) => sum + block.text.split(/\s+/).filter(Boolean).length, 0);
   return {
     id: idx + 1,
-    slug: toSlug(item.title ?? '', item.date ?? ''),
-    title: item.title ?? '',
-    subtitle: item.subtitle ?? '',
-    category: item.category ?? 'Brand Tips',
-    categoryColor: categoryColorMap[item.category ?? ''] ?? 'text-slate-600 bg-slate-50 border-slate-100',
-    date: item.date ?? '',
-    readingTime: parseReadingTime(item.content ?? []),
+    slug: toSlug(rawItem.title ?? '', rawItem.date ?? ''),
+    title: rawItem.title ?? '',
+    subtitle: rawItem.subtitle ?? '',
+    category: rawItem.category ?? 'Brand Tips',
+    categoryColor: categoryColorMap[rawItem.category ?? ''] ?? 'text-slate-600 bg-slate-50 border-slate-100',
+    date: rawItem.date ?? '',
+    readingTime: parseReadingTime(rawItem.content ?? []),
     wordCount,
-    tags: item.tags ?? [],
-    lead: item.excerpt ?? '',
+    tags: rawItem.tags ?? [],
+    lead: rawItem.excerpt ?? '',
     body,
-    images: item.date ? getImages(item.date) : [],
-    sourceUrl: item.source_url ?? '',
-    keyTakeaways: (item as any).key_takeaway
-      ? (Array.isArray((item as any).key_takeaway) ? (item as any).key_takeaway : [(item as any).key_takeaway])
+    images: rawItem.date ? getImages(rawItem.date) : [],
+    sourceUrl: rawItem.source_url ?? '',
+    keyTakeaways: rawItem.key_takeaway
+      ? (Array.isArray(rawItem.key_takeaway) ? rawItem.key_takeaway : [rawItem.key_takeaway])
       : undefined,
   };
 });

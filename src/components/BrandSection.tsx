@@ -6,17 +6,17 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { stats } from '../config/brand';
 import logoData from '../assets/partner/logo-section.json';
 
-const partnerLogoModules = import.meta.glob('../assets/partner/*.{png,jpg,jpeg,svg}', { eager: true });
+const partnerLogoModules = import.meta.glob<{ default: string }>('../assets/partner/*.{png,jpg,jpeg,svg}', { eager: true });
 
-const imageModules = import.meta.glob('../assets/brand/*.png', { eager: true });
-const brandImages = Object.values(imageModules).map((mod: any) => mod.default);
+const imageModules = import.meta.glob<{ default: string }>('../assets/brand/*.png', { eager: true });
+const brandImages = Object.values(imageModules).map((mod) => mod.default);
 
 // Helper to get partner logo URL from filename in JSON
 const getPartnerLogoUrl = (filename: string) => {
   // Try exact match first
   const exactPath = `../assets/partner/${filename}`;
   if (partnerLogoModules[exactPath]) {
-    return (partnerLogoModules[exactPath] as any).default;
+    return partnerLogoModules[exactPath].default;
   }
 
   // Try fuzzy match for potential encoding issues (especially with Thai characters)
@@ -24,14 +24,14 @@ const getPartnerLogoUrl = (filename: string) => {
   const entries = Object.entries(partnerLogoModules);
   const match = entries.find(([path]) => path.includes(basename));
 
-  return match ? (match[1] as any).default : '';
+  return match ? match[1].default : '';
 };
 
 // --- Animated Counter Component ---
 const Counter = ({ value, suffix = "" }: { value: number; suffix?: string }) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   useEffect(() => {
     if (isInView) {
@@ -239,13 +239,13 @@ export default function BrandSection() {
               className="flex flex-col items-center text-center"
             >
               <Typography variant="overline" className="text-cyan-600 font-bold tracking-[0.2em] mb-4 block">
-                {logoData.section.eyebrow}
+                {t('partnerSection.eyebrow')}
               </Typography>
               <Typography variant="h4" className="text-2xl md:text-3xl font-black text-slate-800 leading-tight">
-                {logoData.section.title}
+                {t('partnerSection.title')}
               </Typography>
               <Typography variant="body1" className="text-slate-500 mt-4 max-w-2xl mx-auto leading-relaxed">
-                {logoData.section.subtitle}
+                {t('partnerSection.subtitle')}
               </Typography>
             </motion.div>
           </div>

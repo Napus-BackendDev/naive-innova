@@ -3,10 +3,11 @@ import { Typography, Container, Modal, Box, IconButton } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CircleDollarSign, Package, Clock, Box as BoxIcon, Tag, Maximize2, Download, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import type { Product } from '../../types/product';
 
-const productImages = import.meta.glob('../../assets/eachproduct/*.{jpeg,jpg,png,svg}', { eager: true });
+const productImages = import.meta.glob<{ default: string }>('../../assets/eachproduct/*.{jpeg,jpg,png,svg}', { eager: true });
 
-export default function HeroSection({ product }: { product: any }) {
+export default function HeroSection({ product }: { product: Product }) {
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
@@ -20,7 +21,7 @@ export default function HeroSection({ product }: { product: any }) {
     const match = entries.find(([path]) => path.endsWith(imageName));
 
     if (match) {
-      return (match[1] as any).default;
+      return match[1].default;
     }
 
     // Fallback to Unsplash if not found
@@ -55,19 +56,19 @@ export default function HeroSection({ product }: { product: any }) {
     {
       icon: CircleDollarSign,
       title: isEn ? 'Estimated Cost' : 'ต้นทุนโดยประมาณ',
-      value: `${product.price} ${product.unit}`,
+      value: `${product.price} ${isEn ? (product.unitEn || product.unit) : product.unit}`,
       colorClass: 'from-blue-100 to-cyan-50 text-blue-600'
     },
     {
       icon: Package,
       title: isEn ? 'Minimum Order (MOQ)' : 'ขั้นต่ำการผลิต (MOQ)',
-      value: product.moq,
+      value: isEn ? (product.moqEn || product.moq) : product.moq,
       colorClass: 'from-emerald-100 to-teal-50 text-emerald-600'
     },
     {
       icon: Clock,
       title: isEn ? 'Lead Time' : 'ระยะเวลาผลิต',
-      value: product.leadTime,
+      value: isEn ? (product.leadTimeEn || product.leadTime) : product.leadTime,
       colorClass: 'from-orange-100 to-amber-50 text-orange-600'
     },
     {

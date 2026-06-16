@@ -1,8 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import { Container, Typography, Button } from '@mui/material';
 import { motion } from 'framer-motion';
 import { Sparkles, ShieldCheck, Binary, Globe, FlaskConical, ArrowRight } from 'lucide-react';
 
 export default function HeroSection() {
+  const { t } = useTranslation();
 
   const stats = [
     { title: '100+', desc: 'Active Ingredients' },
@@ -58,13 +60,9 @@ export default function HeroSection() {
         >
           <Typography
             variant="h1"
-            className="text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.08] tracking-tight"
+            className="text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.08] tracking-tight whitespace-pre-line"
           >
-            วิทยาศาสตร์ที่อยู่
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 via-blue-500 to-fuchsia-500">
-              เบื้องหลัง ทุกสูตร
-            </span>
+            {t('innovationPage.heroTitle')}
           </Typography>
         </motion.div>
 
@@ -79,9 +77,7 @@ export default function HeroSection() {
             variant="body1"
             className="text-lg text-slate-500 leading-relaxed max-w-lg font-medium"
           >
-            Naive Innova ไม่ได้แค่ผสมสูตร — เราออกแบบนวัตกรรมที่มีงานวิจัยรองรับ
-            ด้วย 3 เทคโนโลยีหลัก และ Active Ingredient Library กว่า 100+ ชนิด
-            ที่พร้อมให้เลือกสรรสำหรับแบรนด์ของคุณ
+            {t('innovationPage.heroSubtitle')}
           </Typography>
 
           <div className="flex flex-col sm:flex-row gap-3 lg:ml-auto lg:shrink-0">
@@ -91,7 +87,7 @@ export default function HeroSection() {
               className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-2xl font-bold normal-case text-base shadow-xl shadow-slate-200/80 transition-all hover:scale-105 active:scale-95"
               endIcon={<FlaskConical size={18} />}
             >
-              ดูสารสกัดทั้งหมด
+              {t('innovationPage.heroBtnExtracts')}
             </Button>
             <Button
               variant="outlined"
@@ -99,7 +95,7 @@ export default function HeroSection() {
               className="border border-slate-200 text-slate-700 hover:bg-slate-50 px-8 py-4 rounded-2xl font-bold normal-case text-base transition-all hover:border-slate-300"
               endIcon={<ArrowRight size={18} />}
             >
-              ขอปรึกษา R&amp;D ฟรี
+              {t('innovationPage.heroBtnConsult')}
             </Button>
           </div>
         </motion.div>

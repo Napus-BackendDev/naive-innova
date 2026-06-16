@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import { MessageSquare, FlaskConical, TestTube, Palette, Factory, Truck, Clock, DollarSign } from 'lucide-react';
@@ -6,109 +7,129 @@ import { contactButtons } from '../../config/services';
 const steps = [
   {
     num: '01',
-    badge: 'Consultation',
+    badgeKey: 'brandingPage.stepsDetail.step1.badge',
     icon: MessageSquare,
     color: 'from-cyan-500 to-cyan-600',
     lightBg: 'bg-cyan-50',
     lightText: 'text-cyan-600',
     lightBorder: 'border-cyan-100',
-    title: 'ปรึกษาและ วางกลยุทธ์',
-    subtitle: 'นัดคุยกับทีมเพื่อเข้าใจ Vision ของแบรนด์คุณ พร้อมคำแนะนำด้านการตลาด การวางตำแหน่ง และช่วยประเมินงบประมาณให้ชัดเจน ไม่ต้องเริ่มจากศูนย์',
-    items: [
-      'นัดคุยฟรี — ผ่าน LINE, โทรศัพท์ หรือเข้าโรงงาน',
-      'ประเมินงบสร้างแบรนด์ฟรี — บอกงบที่มี เราวางแผนให้',
-      'ให้คำแนะนำด้าน Product-Market Fit และโพสิชันนิ่งแบรนด์',
+    titleKey: 'brandingPage.stepsDetail.step1.title',
+    subtitleKey: 'brandingPage.stepsDetail.step1.subtitle',
+    itemsKeys: [
+      'brandingPage.stepsDetail.step1.item1',
+      'brandingPage.stepsDetail.step1.item2',
+      'brandingPage.stepsDetail.step1.item3',
     ],
-    meta: [{ icon: Clock, label: 'ระยะเวลา', value: '1 วัน' }, { icon: DollarSign, label: 'ค่าใช้จ่าย', value: 'ฟรี' }],
+    meta: [
+      { icon: Clock, labelKey: 'brandingPage.stepsDetail.step1.meta1Label', valueKey: 'brandingPage.stepsDetail.step1.meta1Value' },
+      { icon: DollarSign, labelKey: 'brandingPage.stepsDetail.step1.meta2Label', valueKey: 'brandingPage.stepsDetail.step1.meta2Value' },
+    ],
   },
   {
     num: '02',
-    badge: 'Formulation',
+    badgeKey: 'brandingPage.stepsDetail.step2.badge',
     icon: FlaskConical,
     color: 'from-fuchsia-500 to-fuchsia-600',
     lightBg: 'bg-fuchsia-50',
     lightText: 'text-fuchsia-600',
     lightBorder: 'border-fuchsia-100',
-    title: 'เลือกหรือ พัฒนาสูตร',
-    subtitle: 'เลือกจาก Nano Ingredient Library กว่า 50 สูตร ที่ validated แล้ว หรือให้ทีม R&D พัฒนาสูตรใหม่เฉพาะคุณ หากคุณมีสูตรเดิมอยู่แล้ว เราช่วย Nano-upgrade เพื่อยกระดับประสิทธิภาพ',
-    items: [
-      'Nano-Encapsulation 84 นาโนเมตร — สารซึมลึก ออกฤทธิ์นานขึ้น',
-      'EcoGuard Plus — สารฆ่าเชื้อจาก FDA USA + EFSA EU',
-      'วัตถุดิบสมุนไพรเหนือ: ดอยคาโมมาย มังคุด ขมิ้นชัน',
+    titleKey: 'brandingPage.stepsDetail.step2.title',
+    subtitleKey: 'brandingPage.stepsDetail.step2.subtitle',
+    itemsKeys: [
+      'brandingPage.stepsDetail.step2.item1',
+      'brandingPage.stepsDetail.step2.item2',
+      'brandingPage.stepsDetail.step2.item3',
     ],
-    meta: [{ icon: Clock, label: 'ระยะเวลา', value: '5–7 วัน' }, { icon: FlaskConical, label: 'สูตรพร้อมใช้', value: '50+' }],
+    meta: [
+      { icon: Clock, labelKey: 'brandingPage.stepsDetail.step2.meta1Label', valueKey: 'brandingPage.stepsDetail.step2.meta1Value' },
+      { icon: FlaskConical, labelKey: 'brandingPage.stepsDetail.step2.meta2Label', valueKey: 'brandingPage.stepsDetail.step2.meta2Value' },
+    ],
   },
   {
     num: '03',
-    badge: 'Testing',
+    badgeKey: 'brandingPage.stepsDetail.step3.badge',
     icon: TestTube,
     color: 'from-blue-500 to-blue-600',
     lightBg: 'bg-blue-50',
     lightText: 'text-blue-600',
     lightBorder: 'border-blue-100',
-    title: 'ทดสอบกับ สัตว์เลี้ยงจริง',
-    subtitle: 'รับ Sample Kit ไปทดสอบกับสัตว์เลี้ยงของคุณหรือลูกค้าก่อนตัดสินใจผลิตเต็มลอต ทุกสูตรผ่านการทดสอบทางห้องแล็บแล้ว ทั้ง Challenge Test (ม.เกษตรฯ) และ Clinical Test (คลินิกสัตวแพทย์พาร์ทเนอร์)',
-    items: [
-      'Sample Kit ฟรี — ไม่มีข้อผูกมัด',
-      'ทดสอบ MRSP, Pseudomonas, E.coli, Malassezia แล้ว',
-      'ปรับแต่งกลิ่น สี สัมผัส หลังทดสอบได้',
+    titleKey: 'brandingPage.stepsDetail.step3.title',
+    subtitleKey: 'brandingPage.stepsDetail.step3.subtitle',
+    itemsKeys: [
+      'brandingPage.stepsDetail.step3.item1',
+      'brandingPage.stepsDetail.step3.item2',
+      'brandingPage.stepsDetail.step3.item3',
     ],
-    meta: [{ icon: Clock, label: 'ระยะเวลา', value: '5–7 วัน' }, { icon: DollarSign, label: 'Sample', value: 'ฟรี' }],
+    meta: [
+      { icon: Clock, labelKey: 'brandingPage.stepsDetail.step3.meta1Label', valueKey: 'brandingPage.stepsDetail.step3.meta1Value' },
+      { icon: DollarSign, labelKey: 'brandingPage.stepsDetail.step3.meta2Label', valueKey: 'brandingPage.stepsDetail.step3.meta2Value' },
+    ],
   },
   {
     num: '04',
-    badge: 'Design & Regulatory',
+    badgeKey: 'brandingPage.stepsDetail.step4.badge',
     icon: Palette,
     color: 'from-orange-500 to-orange-600',
     lightBg: 'bg-orange-50',
     lightText: 'text-orange-600',
     lightBorder: 'border-orange-100',
-    title: 'ออกแบบและ จัดการเอกสาร',
-    subtitle: 'มีไฟล์ Artwork อยู่แล้ว? ส่งมาพิมพ์ได้เลย หรือถ้ายังไม่มี — เรามีทีมออกแบบช่วยสร้างอัตลักษณ์แบรนด์ในราคาเป็นมิตร SME พร้อมดูแลเรื่องเอกสารให้ครบถ้วน',
-    items: [
-      'Logo, Packaging, Label — บริการเสริมราคา SME-friendly',
-      'ไม่ต้องขึ้นทะเบียน — ผลิตเสร็จ พร้อมขายทันที',
-      'ขนาดบรรจุภัณฑ์ปรับได้หลายขนาด ตามกลยุทธ์แบรนด์',
+    titleKey: 'brandingPage.stepsDetail.step4.title',
+    subtitleKey: 'brandingPage.stepsDetail.step4.subtitle',
+    itemsKeys: [
+      'brandingPage.stepsDetail.step4.item1',
+      'brandingPage.stepsDetail.step4.item2',
+      'brandingPage.stepsDetail.step4.item3',
     ],
-    meta: [{ icon: Clock, label: 'ระยะเวลา', value: '7–10 วัน' }, { icon: Clock, label: 'ทำคู่ขนาน', value: 'กับขั้น 5' }],
+    meta: [
+      { icon: Clock, labelKey: 'brandingPage.stepsDetail.step4.meta1Label', valueKey: 'brandingPage.stepsDetail.step4.meta1Value' },
+      { icon: Clock, labelKey: 'brandingPage.stepsDetail.step4.meta2Label', valueKey: 'brandingPage.stepsDetail.step4.meta2Value' },
+    ],
   },
   {
     num: '05',
-    badge: 'Manufacturing',
+    badgeKey: 'brandingPage.stepsDetail.step5.badge',
     icon: Factory,
     color: 'from-emerald-500 to-emerald-600',
     lightBg: 'bg-emerald-50',
     lightText: 'text-emerald-600',
     lightBorder: 'border-emerald-100',
-    title: 'ผลิตจริงที่ โรงงานเชียงราย',
-    subtitle: 'เริ่มผลิตที่ MOQ 100 ชิ้น — เราสนับสนุน SME ให้เริ่มต้นได้ไม่ยาก มีระบบ QA/QC ควบคุมคุณภาพทุกขั้นตอน ใบอนุญาตผลิตจากสำนักงานสาธารณสุขจังหวัดครบถ้วน',
-    items: [
-      'MOQ 100 ชิ้น — สั่งยิ่งเยอะ ยิ่งถูก (500/1,000/2,000+ ลดราคาต่อหน่วย)',
-      'ยิง Lot ฟรี · ซีลพลาสติกฟรี ทุกยอดสั่งผลิต',
-      'มัดจำ 50% เริ่มผลิต · ส่วนที่เหลือก่อนจัดส่ง',
+    titleKey: 'brandingPage.stepsDetail.step5.title',
+    subtitleKey: 'brandingPage.stepsDetail.step5.subtitle',
+    itemsKeys: [
+      'brandingPage.stepsDetail.step5.item1',
+      'brandingPage.stepsDetail.step5.item2',
+      'brandingPage.stepsDetail.step5.item3',
     ],
-    meta: [{ icon: Clock, label: 'ระยะเวลา', value: '15–20 วันทำการ' }, { icon: Factory, label: 'MOQ', value: '100 ชิ้น' }],
+    meta: [
+      { icon: Clock, labelKey: 'brandingPage.stepsDetail.step5.meta1Label', valueKey: 'brandingPage.stepsDetail.step5.meta1Value' },
+      { icon: Factory, labelKey: 'brandingPage.stepsDetail.step5.meta2Label', valueKey: 'brandingPage.stepsDetail.step5.meta2Value' },
+    ],
   },
   {
     num: '06',
-    badge: 'Delivery',
+    badgeKey: 'brandingPage.stepsDetail.step6.badge',
     icon: Truck,
     color: 'from-violet-500 to-violet-600',
     lightBg: 'bg-violet-50',
     lightText: 'text-violet-600',
     lightBorder: 'border-violet-100',
-    title: 'จัดส่ง พร้อมวางขาย',
-    subtitle: 'ส่งสินค้าทั่วประเทศผ่านบริษัทขนส่งเอกชน พร้อมวางจำหน่ายได้ทันที — ไม่ต้องรอเอกสาร ไม่ต้องขึ้นทะเบียน เริ่มทำตลาดได้เลย',
-    items: [
-      'กรุงเทพ+ปริมณฑล: 1–2 วัน',
-      'ต่างจังหวัด: 2–4 วัน',
-      'ราคายังไม่รวม VAT 7% และค่าขนส่ง',
+    titleKey: 'brandingPage.stepsDetail.step6.title',
+    subtitleKey: 'brandingPage.stepsDetail.step6.subtitle',
+    itemsKeys: [
+      'brandingPage.stepsDetail.step6.item1',
+      'brandingPage.stepsDetail.step6.item2',
+      'brandingPage.stepsDetail.step6.item3',
     ],
-    meta: [{ icon: Clock, label: 'ระยะเวลารวม', value: '30–45 วัน' }, { icon: Truck, label: 'เทียบตลาด', value: 'OEM ทั่วไป 60–90 วัน' }],
+    meta: [
+      { icon: Clock, labelKey: 'brandingPage.stepsDetail.step6.meta1Label', valueKey: 'brandingPage.stepsDetail.step6.meta1Value' },
+      { icon: Truck, labelKey: 'brandingPage.stepsDetail.step6.meta2Label', valueKey: 'brandingPage.stepsDetail.step6.meta2Value' },
+    ],
   },
 ];
 
 export default function DifferenceSection() {
+  const { t } = useTranslation();
+
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       {/* Subtle background */}
@@ -127,7 +148,10 @@ export default function DifferenceSection() {
               <span className="text-xs font-black uppercase tracking-[0.2em] text-slate-500">Deep Dive</span>
             </div>
             <Typography variant="h2" className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
-              รายละเอียด <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-fuchsia-500">แต่ละขั้นตอน</span>
+              {t('brandingPage.stepsDetailSubtitle')}{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-fuchsia-500">
+                {t('brandingPage.stepsDetailTitle')}
+              </span>
             </Typography>
           </motion.div>
         </div>
@@ -143,18 +167,18 @@ export default function DifferenceSection() {
               transition={{ duration: 0.5, delay: idx * 0.08 }}
               className="group"
             >
-              <div className="h-full bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <div className="h-full bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
                 {/* Card top gradient strip */}
                 <div className={`h-1.5 w-full bg-gradient-to-r ${step.color}`} />
 
-                <div className="p-8">
+                <div className="p-8 flex flex-col flex-1">
                   {/* Step number + badge */}
                   <div className="flex items-center justify-between mb-6">
                     <span className="text-[44px] font-black text-slate-100 leading-none select-none">
                       {step.num}
                     </span>
                     <div className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest ${step.lightBg} ${step.lightText} border ${step.lightBorder}`}>
-                      {step.badge}
+                      {t(step.badgeKey)}
                     </div>
                   </div>
 
@@ -164,32 +188,32 @@ export default function DifferenceSection() {
                       <step.icon size={22} strokeWidth={1.75} />
                     </div>
                     <Typography variant="h5" className="text-xl font-black text-slate-900 leading-snug tracking-tight">
-                      {step.title}
+                      {t(step.titleKey)}
                     </Typography>
                   </div>
 
                   {/* Subtitle */}
-                  <Typography variant="body2" className="text-slate-500 text-sm leading-relaxed mb-6">
-                    {step.subtitle}
+                  <Typography variant="body2" className="text-slate-500 text-sm leading-relaxed mb-6 flex-1">
+                    {t(step.subtitleKey)}
                   </Typography>
 
                   {/* Content items */}
                   <ul className="space-y-2 mb-6">
-                    {step.items.map((item, i) => (
+                    {step.itemsKeys.map((itemKey, i) => (
                       <li key={i} className="flex items-start gap-2.5 text-sm text-slate-600">
                         <span className={`mt-1.5 w-1.5 h-1.5 rounded-full shrink-0 bg-gradient-to-br ${step.color}`} />
-                        <span>{item}</span>
+                        <span>{t(itemKey)}</span>
                       </li>
                     ))}
                   </ul>
 
                   {/* Meta badges */}
-                  <div className={`border-t ${step.lightBorder} pt-5 flex flex-wrap gap-3`}>
+                  <div className={`border-t ${step.lightBorder} pt-5 flex flex-wrap gap-3 mt-auto`}>
                     {step.meta.map((m, i) => (
                       <div key={i} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl ${step.lightBg} border ${step.lightBorder}`}>
                         <m.icon size={13} className={step.lightText} />
-                        <span className="text-[11px] font-bold text-slate-500">{m.label}:</span>
-                        <span className={`text-[11px] font-black ${step.lightText}`}>{m.value}</span>
+                        <span className="text-[11px] font-bold text-slate-500">{t(m.labelKey)}:</span>
+                        <span className={`text-[11px] font-black ${step.lightText}`}>{t(m.valueKey)}</span>
                       </div>
                     ))}
                   </div>

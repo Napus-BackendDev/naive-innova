@@ -150,7 +150,10 @@
           "en": "Alcohol-free"
         }
       ],
-      "image": "product-01-bio-shampoo.jpg"
+      "image": "product-01-bio-shampoo.jpg",
+      "moqEn": "100 pcs",
+      "leadTimeEn": "15-20 days",
+      "unitEn": "THB / Liter (cost)"
     },
     {
       "id": "shampoo-oil",
@@ -294,7 +297,10 @@
           "en": "Triclosan-Free"
         }
       ],
-      "image": "product-02-shampoo-oil.jpg"
+      "image": "product-02-shampoo-oil.jpg",
+      "moqEn": "100 pcs",
+      "leadTimeEn": "15-20 days",
+      "unitEn": "THB / Liter (cost)"
     },
     {
       "id": "dry-foam",
@@ -438,7 +444,10 @@
           "en": "Paraben Free"
         }
       ],
-      "image": "product-03-dry-foam.jpg"
+      "image": "product-03-dry-foam.jpg",
+      "moqEn": "100 pcs",
+      "leadTimeEn": "15-20 days",
+      "unitEn": "THB / Liter (cost)"
     },
     {
       "id": "coat-treatment",
@@ -587,7 +596,10 @@
           "en": "Alcohol-Free"
         }
       ],
-      "image": "product-04-coat-treatment.jpg"
+      "image": "product-04-coat-treatment.jpg",
+      "moqEn": "100 pcs",
+      "leadTimeEn": "15-20 days",
+      "unitEn": "THB / KG (cost)"
     },
     {
       "id": "coat-antibac-spray",
@@ -726,7 +738,10 @@
           "en": "Alcohol-Free"
         }
       ],
-      "image": "product-05-coat-antibac-spray.jpg"
+      "image": "product-05-coat-antibac-spray.jpg",
+      "moqEn": "100 pcs",
+      "leadTimeEn": "15-20 days",
+      "unitEn": "THB / Liter (cost)"
     },
     {
       "id": "deodorant-spray",
@@ -870,7 +885,10 @@
           "en": "Triclosan-Free"
         }
       ],
-      "image": "product-06-deodorant-spray.jpg"
+      "image": "product-06-deodorant-spray.jpg",
+      "moqEn": "100 pcs",
+      "leadTimeEn": "15-20 days",
+      "unitEn": "THB / Liter (cost)"
     },
     {
       "id": "antifungal-spray",
@@ -1014,7 +1032,10 @@
           "en": "Alcohol-Free"
         }
       ],
-      "image": "product-07-antifungal-spray.jpg"
+      "image": "product-07-antifungal-spray.jpg",
+      "moqEn": "100 pcs",
+      "leadTimeEn": "15-20 days",
+      "unitEn": "THB / Liter (cost)"
     },
     {
       "id": "eye-ear-cleaner",
@@ -1158,7 +1179,10 @@
           "en": "Triclosan-Free"
         }
       ],
-      "image": "product-08-eye-ear-cleaner.jpg"
+      "image": "product-08-eye-ear-cleaner.jpg",
+      "moqEn": "100 pcs",
+      "leadTimeEn": "15-20 days",
+      "unitEn": "THB / Liter (cost)"
     },
     {
       "id": "skin-repair-gel",
@@ -1307,7 +1331,10 @@
           "en": "ปลอดแอลกอฮอล์"
         }
       ],
-      "image": "product-09-skin-repair-gel.jpg"
+      "image": "product-09-skin-repair-gel.jpg",
+      "moqEn": "100 pcs",
+      "leadTimeEn": "15-20 days",
+      "unitEn": "THB / Liter (cost)"
     },
     {
       "id": "tear-stain-powder",
@@ -1451,7 +1478,10 @@
           "en": "Safe for Eyes"
         }
       ],
-      "image": "product-10-tear-stain-powder.jpg"
+      "image": "product-10-tear-stain-powder.jpg",
+      "moqEn": "500 pcs",
+      "leadTimeEn": "15-20 days",
+      "unitEn": "THB / KG (cost)"
     },
     {
       "id": "body-powder",
@@ -1595,7 +1625,10 @@
           "en": "Hypoallergenic"
         }
       ],
-      "image": "product-11-body-powder.jpg"
+      "image": "product-11-body-powder.jpg",
+      "moqEn": "100 pcs",
+      "leadTimeEn": "15-20 days",
+      "unitEn": "THB / KG (cost)"
     },
     {
       "id": "custom-formula",
@@ -1735,7 +1768,10 @@
           "en": "Exclusive Ownership"
         }
       ],
-      "image": "product-12-custom-formula.jpg"
+      "image": "product-12-custom-formula.jpg",
+      "moqEn": "ขั้นต่ำ 300 pcs",
+      "leadTimeEn": "45-60 days",
+      "unitEn": "ประเมินราคาตามสเปค"
     }
   ]
 }

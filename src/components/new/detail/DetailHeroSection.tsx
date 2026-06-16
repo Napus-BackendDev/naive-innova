@@ -1,6 +1,7 @@
 import { Container, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import { Clock, CalendarDays, BookOpen, Tag } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface DetailHeroProps {
   category: string;
@@ -23,7 +24,9 @@ export default function DetailHeroSection({
   wordCount,
   tags,
 }: DetailHeroProps) {
-  const formattedDate = new Date(date).toLocaleDateString('th-TH', {
+  const { t, i18n } = useTranslation();
+
+  const formattedDate = new Date(date).toLocaleDateString(i18n.language === 'en' ? 'en-US' : 'th-TH', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
@@ -107,11 +110,11 @@ export default function DetailHeroSection({
             </div>
             <div className="flex items-center gap-1.5 text-slate-400">
               <Clock size={14} className="text-fuchsia-500" />
-              <span className="text-sm font-semibold">{readingTime} นาทีในการอ่าน</span>
+              <span className="text-sm font-semibold">{t('newsDetail.readingTime', { count: readingTime })}</span>
             </div>
             <div className="flex items-center gap-1.5 text-slate-400">
               <BookOpen size={14} className="text-blue-500" />
-              <span className="text-sm font-semibold">{wordCount.toLocaleString()} คำ</span>
+              <span className="text-sm font-semibold">{t('newsDetail.wordCount', { count: wordCount.toLocaleString() })}</span>
             </div>
           </motion.div>
 

@@ -5,20 +5,20 @@ import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // Load all certification files dynamically
-const certFiles = import.meta.glob('../../assets/cetification/*.{pdf,jpg,png,jpeg}', { eager: true });
+const certFiles = import.meta.glob<{ default: string }>('../../assets/cetification/*.{pdf,jpg,png,jpeg}', { eager: true });
 
 export default function CertifiedSection() {
   const { t } = useTranslation();
   const scrollRef = useRef<HTMLDivElement>(null);
 
   // Transform glob files into displayable items
-  const certifications = Object.entries(certFiles).map(([path, module]: [string, any]) => {
+  const certifications = Object.entries(certFiles).map(([path, module]) => {
     const fileName = path.split('/').pop() || '';
     const isPdf = fileName.toLowerCase().endsWith('.pdf');
     const url = module.default;
 
     // Clean up filename for display
-    let displayName = fileName
+    const displayName = fileName
       .replace(/\.[^/.]+$/, "") // Remove last extension
       .replace(/\.pdf$/, "")     // Remove second extension if it exists (e.g. .pdf.pdf)
       .trim();

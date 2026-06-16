@@ -1,8 +1,12 @@
+import { useTranslation } from 'react-i18next';
 import { Container, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import { Share2 } from 'lucide-react';
 
 export default function HeroSection() {
+  const { t, i18n } = useTranslation();
+  const isEn = i18n.language === 'en';
+
   return (
     <section className="relative pt-32 pb-16 bg-white overflow-hidden">
       {/* Background gradients */}
@@ -18,7 +22,9 @@ export default function HeroSection() {
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-50 border border-slate-200 mb-8 shadow-sm">
             <Share2 size={14} className="text-fuchsia-500" />
-            <span className="text-[11px] font-black uppercase tracking-[0.2em] text-fuchsia-600">Connectivity Hub</span>
+            <span className="text-[11px] font-black uppercase tracking-[0.2em] text-fuchsia-600">
+              {t('contentPage.heroBadge')}
+            </span>
           </div>
 
           {/* Large Editorial Title */}
@@ -26,13 +32,17 @@ export default function HeroSection() {
             variant="h1"
             className="text-6xl md:text-8xl font-black text-slate-900 tracking-tighter leading-none mb-10"
           >
-            CON<span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-cyan-500">TENT</span>
+            {isEn ? (
+              <>CON<span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-cyan-500">TENT</span></>
+            ) : (
+              t('contentPage.heroTitle')
+            )}
           </Typography>
 
           {/* Minimal Subtitle */}
           <div className="max-w-2xl border-l-4 border-fuchsia-500 pl-8 ml-2">
             <Typography variant="body1" className="text-xl md:text-2xl text-slate-400 font-medium leading-relaxed italic">
-              "Your central hub for brand assets, communication channels, and geographic presence. Everything Naive Innova, in one place."
+              {t('contentPage.heroSubtitle')}
             </Typography>
           </div>
         </motion.div>

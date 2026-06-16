@@ -2,12 +2,14 @@ import { Container } from '@mui/material';
 import { motion } from 'framer-motion';
 import { Facebook, ExternalLink } from 'lucide-react';
 import nawinAvatar from '../../../assets/new/nawin-avatar.jpg';
+import { useTranslation } from 'react-i18next';
 
 interface DetailProfileProps {
   sourceUrl?: string;
 }
 
 export default function DetailProfile({ sourceUrl }: DetailProfileProps) {
+  const { t } = useTranslation();
   const FACEBOOK_URL = sourceUrl || 'https://www.facebook.com/NaiveInnova';
   return (
     <section className="py-14 bg-white">
@@ -20,7 +22,7 @@ export default function DetailProfile({ sourceUrl }: DetailProfileProps) {
             <div className="flex items-center gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
               <span className="text-[11px] font-black uppercase tracking-[0.2em] text-slate-300">
-                เรียบเรียงโดย
+                {t('newsDetail.by')}
               </span>
               <div className="w-1.5 h-1.5 rounded-full bg-fuchsia-400" />
             </div>
@@ -66,14 +68,14 @@ export default function DetailProfile({ sourceUrl }: DetailProfileProps) {
 
               {/* Bio */}
               <p className="text-sm text-slate-500 font-medium leading-snug mb-1">
-                นักการตลาดสร้างสรรค์ ที่ขับเครื่ององค์กรด้วย AI Agents Innovation
+                {t('newsDetail.authorSubtitle')}
               </p>
 
               {/* Role badge */}
               <div className="inline-flex items-center gap-2 mt-2 mb-5 px-3 py-1.5 bg-white border border-slate-100 rounded-xl shadow-sm">
                 <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-br from-cyan-500 to-fuchsia-500" />
                 <span className="text-[12px] font-bold text-slate-500">
-                  Digital Marketing Consultant · นาอีฟ อินโนว่า
+                  {t('newsDetail.authorTitle')}
                 </span>
               </div>
 
@@ -87,7 +89,7 @@ export default function DetailProfile({ sourceUrl }: DetailProfileProps) {
                 className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-2xl bg-[#1877F2] hover:bg-[#1565D8] text-white font-bold text-sm transition-colors duration-200 shadow-lg shadow-blue-500/20 no-underline"
               >
                 <Facebook size={16} />
-                ติดตามบน Facebook
+                {t('newsDetail.followFacebook')}
                 <ExternalLink size={12} className="opacity-70" />
               </motion.a>
             </div>

@@ -3,9 +3,11 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Droplets, ShieldCheck, HeartPulse, Leaf, CheckCircle } from 'lucide-react';
 
+import type { Product } from '../../types/product';
+
 const icons = [Droplets, ShieldCheck, HeartPulse, Leaf];
 
-export default function ProductSection({ product }: { product: any }) {
+export default function ProductSection({ product }: { product: Product }) {
   const { t, i18n } = useTranslation();
   const isEn = i18n.language === 'en';
 
@@ -47,7 +49,7 @@ export default function ProductSection({ product }: { product: any }) {
             'lg:grid-cols-4'
           } relative bg-white border border-slate-100 rounded-[2rem] shadow-xl shadow-slate-200/50 divide-y lg:divide-y-0 lg:divide-x divide-slate-100 overflow-hidden`}
         >
-          {product.benefits && product.benefits.map((item: any, index: number) => {
+          {product.benefits && product.benefits.map((item, index: number) => {
             const IconComponent = icons[index % icons.length] || CheckCircle;
             const title = isEn ? (item.titleEn || item.title) : item.title;
             const desc = isEn ? (item.descEn || item.desc) : item.desc;

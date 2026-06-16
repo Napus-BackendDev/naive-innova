@@ -5,10 +5,11 @@ import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import productsData from '../../i18n/products/products-all.json';
+import type { Product } from '../../types/product';
 
-const productImages = import.meta.glob('../../assets/eachproduct/*.{jpeg,jpg,png,svg}', { eager: true });
+const productImages = import.meta.glob<{ default: string }>('../../assets/eachproduct/*.{jpeg,jpg,png,svg}', { eager: true });
 
-export default function RelatedSection({ product }: { product: any }) {
+export default function RelatedSection({ product }: { product: Product }) {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -91,7 +92,7 @@ export default function RelatedSection({ product }: { product: any }) {
               const imageName = item.image;
               const entries = Object.entries(productImages);
               const match = entries.find(([path]) => path.endsWith(imageName));
-              const image = match ? (match[1] as any).default : "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=400&auto=format&fit=crop";
+              const image = match ? match[1].default : "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=400&auto=format&fit=crop";
 
               const category = isEn ? item.categoryEn : item.categoryTh;
               const title = isEn ? item.nameEn : item.name;
@@ -133,7 +134,7 @@ export default function RelatedSection({ product }: { product: any }) {
                       {title}
                     </h4>
                     <div className="text-slate-400 font-bold text-sm">
-                      {t('productPage.related.startAt')} {item.price} {t('productPage.related.unit')} · {t('productPage.related.moqLabel', { moq: item.moq })}
+                      {t('productPage.related.startAt')} {item.price} {t('productPage.related.unit')} · {t('productPage.related.moqLabel', { moq: isEn ? (item.moqEn || item.moq) : item.moq })}
                     </div>
                   </div>
                 </motion.div>

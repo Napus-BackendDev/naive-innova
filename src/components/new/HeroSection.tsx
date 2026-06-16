@@ -1,9 +1,18 @@
 import { Container, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
-
-const tags = ['นวัตกรรม', 'แบรนด์', 'กิจกรรม', 'วิทยาศาสตร์', 'Factory Tour'];
+import { useTranslation } from 'react-i18next';
 
 export default function HeroSection() {
+  const { t } = useTranslation();
+
+  const tags = [
+    t('newsHero.tag1'),
+    t('newsHero.tag2'),
+    t('newsHero.tag3'),
+    t('newsHero.tag4'),
+    t('newsHero.tag5')
+  ];
+
   return (
     <section className="relative pt-32 pb-16 bg-white overflow-hidden">
 
@@ -38,7 +47,7 @@ export default function HeroSection() {
               className="text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.06] tracking-tight"
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 via-blue-500 to-fuchsia-500">
-                กิจกรรม &amp; ข่าวสาร
+                {t('newsHero.title')}
               </span>
             </Typography>
           </motion.div>
@@ -54,8 +63,7 @@ export default function HeroSection() {
               variant="body1"
               className="text-lg text-slate-400 leading-relaxed font-medium"
             >
-              ติดตามความเคลื่อนไหว งานวิจัย และเบื้องหลัง
-              จาก Naive Innova — ที่เดียวที่ Science meets Story
+              {t('newsHero.subtitle')}
             </Typography>
           </motion.div>
 
@@ -78,9 +86,6 @@ export default function HeroSection() {
 
         </div>
       </Container>
-
-      {/* Bottom border accent */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-100 to-transparent" />
     </section>
   );
 }

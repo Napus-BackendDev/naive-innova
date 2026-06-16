@@ -1,68 +1,71 @@
 import { Container, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
-
-const statBar = [
-  { value: '50+', label: 'สูตรที่ผ่าน', sub: 'การทดสอบจริง' },
-  { value: '100+', label: 'Active Ingredients', sub: 'ในคลัง' },
-  { value: '3', label: 'ห้องแล็บพาร์ทเนอร์', sub: 'อิสระ' },
-  { value: '≤0.097%', label: 'ความเข้มข้น MIC', sub: 'ยับยั้ง MRSP' },
-  { value: '24+', label: 'ชม.', sub: 'ระยะเวลาออกฤทธิ์ EcoGuard Plus' },
-];
-
-const labRows = [
-  {
-    lab: 'ม.เกษตรศาสตร์',
-    method: 'Broth Microdilution',
-    methodSub: 'CLSI M07-A11',
-    target: 'MRSP, MSSP,\nP. aeruginosa, E. coli',
-    result: 'MIC ≤ 0.0977%',
-  },
-  {
-    lab: 'ม.เกษตรศาสตร์',
-    method: 'Anti-Yeast',
-    methodSub: 'CLSI M27-A3',
-    target: 'Malassezia pachydermatis',
-    result: 'ยับยั้งที่ 1.5625%',
-  },
-  {
-    lab: 'คลินิกสัตวแพทย์พาร์ทเนอร์',
-    method: 'Clinical Test 14 วัน',
-    methodSub: '',
-    target: 'Skin infection (Canine)',
-    result: 'อาการดีขึ้นอย่างมีนัยสำคัญ',
-  },
-  {
-    lab: 'คลินิกสัตวแพทย์พาร์ทเนอร์',
-    method: 'Clinical Test 21 วัน',
-    methodSub: '',
-    target: 'Fungal skin (Canine/Feline)',
-    result: 'ลดรอยโรคเฉลี่ย 78%',
-  },
-  {
-    lab: 'คลินิกสัตวแพทย์พาร์ทเนอร์',
-    method: 'Eye Irritation Test',
-    methodSub: '',
-    target: 'Ocular safety (Feline)',
-    result: 'ไม่พบการระคายเคือง',
-  },
-  {
-    lab: 'In-house QA/QC',
-    method: 'Stability Test',
-    methodSub: '',
-    target: 'All formulas',
-    result: 'คงสภาพ 24 เดือน ที่ 30°C',
-  },
-];
-
-const partners = [
-  { name: 'ม.เกษตรศาสตร์', tags: 'Challenge Testing · Microbiology' },
-  { name: 'สัตวแพทย์พาร์ทเนอร์', tags: 'Clinical Testing · Animal Safety' },
-  { name: 'NANOTEC (สวทช.)', tags: 'Technology Partner · Nano R&D' },
-  { name: 'In-house QA/QC Lab', tags: 'Stability · Quality Control' },
-];
+import { useTranslation } from 'react-i18next';
 
 export default function PROOFSection() {
+  const { t } = useTranslation();
+
+  const statBar = [
+    { value: '50+', label: t('proofSection.stat1Label'), sub: t('proofSection.stat1Sub') },
+    { value: '100+', label: t('proofSection.stat2Label'), sub: t('proofSection.stat2Sub') },
+    { value: '3', label: t('proofSection.stat3Label'), sub: t('proofSection.stat3Sub') },
+    { value: '≤0.097%', label: t('proofSection.stat4Label'), sub: t('proofSection.stat4Sub') },
+    { value: '24+', label: t('proofSection.stat5Label'), sub: t('proofSection.stat5Sub') },
+  ];
+
+  const labRows = [
+    {
+      lab: t('proofSection.labKu'),
+      method: 'Broth Microdilution',
+      methodSub: 'CLSI M07-A11',
+      target: 'MRSP, MSSP,\nP. aeruginosa, E. coli',
+      result: t('proofSection.resultK1'),
+    },
+    {
+      lab: t('proofSection.labKu'),
+      method: 'Anti-Yeast',
+      methodSub: 'CLSI M27-A3',
+      target: 'Malassezia pachydermatis',
+      result: t('proofSection.resultK2'),
+    },
+    {
+      lab: t('proofSection.labPartner'),
+      method: t('proofSection.methodP1'),
+      methodSub: '',
+      target: 'Skin infection (Canine)',
+      result: t('proofSection.resultP1'),
+    },
+    {
+      lab: t('proofSection.labPartner'),
+      method: t('proofSection.methodP2'),
+      methodSub: '',
+      target: 'Fungal skin (Canine/Feline)',
+      result: t('proofSection.resultP2'),
+    },
+    {
+      lab: t('proofSection.labPartner'),
+      method: t('proofSection.methodP3'),
+      methodSub: '',
+      target: 'Ocular safety (Feline)',
+      result: t('proofSection.resultP3'),
+    },
+    {
+      lab: t('proofSection.labInhouse'),
+      method: 'Stability Test',
+      methodSub: '',
+      target: 'All formulas',
+      result: t('proofSection.resultI1'),
+    },
+  ];
+
+  const partners = [
+    { name: t('proofSection.partnerKu'), tags: 'Challenge Testing · Microbiology' },
+    { name: t('proofSection.partnerVet'), tags: 'Clinical Testing · Animal Safety' },
+    { name: t('proofSection.partnerNanotec'), tags: 'Technology Partner · Nano R&D' },
+    { name: t('proofSection.partnerInhouse'), tags: 'Stability · Quality Control' },
+  ];
+
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-50/30 rounded-full blur-[120px] translate-x-1/3 -translate-y-1/3 pointer-events-none" />
@@ -81,13 +84,13 @@ export default function PROOFSection() {
             <span className="text-xs font-black uppercase tracking-[0.2em] text-slate-500">Scientific Proof</span>
           </div>
           <Typography variant="h2" className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 mb-4 tracking-tight leading-tight">
-            ทุก Claim{' '}
+            {t('proofSection.claimPrefix')}{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-fuchsia-500">
-              มีหลักฐานรองรับ
+              {t('proofSection.claimGradient')}
             </span>
           </Typography>
           <p className="text-slate-400 text-sm font-medium max-w-2xl leading-relaxed">
-            ไม่ใช่การตลาด — แต่เป็นวิทยาศาสตร์ที่พิสูจน์ได้จริง ผ่านการทดสอบโดยห้องปฏิบัติการอิสระและคลินิกสัตวแพทย์พาร์ทเนอร์
+            {t('proofSection.claimSubtitle')}
           </p>
         </motion.div>
 
@@ -120,7 +123,12 @@ export default function PROOFSection() {
         >
           {/* Table header */}
           <div className="grid grid-cols-4 bg-slate-900 px-6 py-3">
-            {['ห้องแล็บ / LAB', 'วิธีทดสอบ', 'เชื้อที่ทดสอบ', 'ผลลัพธ์'].map((h, i) => (
+            {[
+              t('proofSection.tableHeaderLab'),
+              t('proofSection.tableHeaderMethod'),
+              t('proofSection.tableHeaderTarget'),
+              t('proofSection.tableHeaderResult')
+            ].map((h, i) => (
               <div key={i} className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-400">
                 {h}
               </div>
@@ -144,11 +152,13 @@ export default function PROOFSection() {
                 <div className="text-sm text-slate-500 font-medium pr-4 whitespace-pre-line">
                   {row.target}
                 </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle2 size={14} className="text-cyan-500 shrink-0 mt-0.5" />
-                  <div>
-                    <div className="text-[11px] font-black text-cyan-600 uppercase tracking-wider mb-0.5">PASS</div>
-                    <div className="text-xs text-slate-500 font-medium">{row.result}</div>
+                <div className="pr-4">
+                  <div className="flex items-start gap-2">
+                    <CheckCircle2 size={14} className="text-cyan-500 shrink-0 mt-0.5" />
+                    <div>
+                      <div className="text-[11px] font-black text-cyan-600 uppercase tracking-wider mb-0.5">PASS</div>
+                      <div className="text-xs text-slate-500 font-medium">{row.result}</div>
+                    </div>
                   </div>
                 </div>
               </div>
